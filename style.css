@@ -1,0 +1,661 @@
+body
+{
+	/*background-image:url(image/map.png);*/
+	background-image:url(image/paper.png);
+	background-color: #2B2C29;
+}
+a
+{
+	text-decoration:none;
+	color: white;
+}
+a:hover
+{
+	color: black;
+	text-decoration:none;
+}
+
+
+form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+input
+{
+	margin: 10px 0;
+	padding: 10px;
+
+ }
+textarea
+{
+ 	max-width: 300px;
+ 	height: 240px;
+}
+span
+{
+	text-align: center;
+	
+}
+.header
+{
+	width: 500px;
+	height: 30px;
+	margin: auto;
+	font-size: 25px;
+	padding: 10px;
+	border-radius: 22px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	font-family: "title_font";
+}
+.menu
+{
+	width: 280px;
+	height: 580px;
+	border: 2px solid black;
+	margin-left: 50px;
+	margin-top: 85px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px; 
+	background-color: #121824;
+}
+.menu > form
+{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.menu > form > a
+{
+	height: 60px;
+	margin-bottom:50px;
+	color: white;
+	outline: none;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	background-color: #121824;
+	font-size: 25px;
+}
+.menu > form > a:hover
+{
+	background-color: #6D6E6A;
+
+}
+.infor
+{
+	width: 800px;
+	height: 700px;
+	display: flex;
+
+	margin-left: 35px;
+	margin-top: 20px;
+
+	background:url(../image/papirus_revers.png);
+	background-size: 850px 720px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+.infor > table
+{
+margin: 50px;
+width: 680px;
+}
+.infor >.part1 > form 
+{
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	color: black;
+	cursor: pointer;
+	min-height: 800px;
+	margin: 50px;
+}
+.infor >.part1 > form >span
+{
+	font-family: "title_font";
+}
+.infor >.part1 > form >input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.infor >.part2 > form >input 
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+    outline: none;
+}
+.infor >.part2 > form
+{
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	color: black;
+	cursor: pointer;
+	height: 650px;
+	border: 2px solid black;
+}
+.infor > span
+{
+	font-family: "title_font";
+	margin: auto;
+}
+.part1
+{
+	width: 400px;
+	height: 700px;
+
+}
+.part2
+{
+	width: 390px;
+	max-height: 620px;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	
+}
+.part3
+{
+	width: 400px;
+	height: 700px;
+	margin: auto;
+}
+.infor >.part3 > form >span
+{
+	font-family: "title_font";
+}
+.infor >.part3 > form >input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.fon
+{
+	border-radius:25px;
+	width: 200px;
+	height: 60px;
+	background-color: black;
+	cursor: pointer;
+}
+.knopca
+{
+	border-radius:25px;
+	border:2px solid black;
+	background-color: black;
+	color: white;
+	width: 200px;
+}
+.order_form 
+{
+	width: 500px;
+	height: 800px;
+	margin: auto;
+	background: url(../image/svitok.png);
+	background-size: 500px 800px;
+	font-size: 30px;
+	text-align: center;
+	font-family: "Typewritten";
+	background-position: 0px -100px center;
+    background-repeat: no-repeat;
+    border: 0.1px solid #E9C674;
+}
+.order_form  > form
+{
+	width: 300px;
+	height: 500px;
+	margin: 100px auto;
+
+}
+.order_form  > form > input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.order_form  > form >span
+{
+	font-family: "title_font";
+	font-size: 25px;
+}
+.sigin
+{
+	width: 500px;
+	height: 800px;
+	margin: auto;
+	background: url(../image/svitok.png);
+	background-size: 500px 800px;
+	background-position: 0px -100px center;
+    background-repeat: no-repeat;
+    border: 0.1px solid #E9C674;
+}
+.sigin > form
+{
+	width: 300px;
+	height: 200px;
+	margin: 100px auto;
+	text-align: center;
+
+}
+.sigin > form > input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.sigin > form >label
+{
+	font-family: "title_font";
+	font-size: 25px;
+}
+.regist
+{
+	width: 500px;
+	height: 800px;
+	margin: auto;
+	background: url(../image/svitok.png);
+	background-size: 500px 800px;
+	background-position: 0px -100px center;
+    background-repeat: no-repeat;
+    border: 0.1px solid #E9C674;
+}
+.regist > form
+{
+	width: 300px;
+	height: 400px;
+	margin: 100px auto;
+	text-align: center;
+
+}
+.regist > form > input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.regist > form >span
+{
+	font-family: "title_font";
+	font-size: 25px;
+}
+.ilP
+{
+ height: 50px;
+
+ margin-bottom: 500px;
+ width: 200px;
+ color: gray;
+ margin: auto;
+}
+.hi
+{	
+	font-family: "title_font";
+	font-size: 50px;
+	background: url(../image/svitok.png);
+}
+.exitadmin
+{
+	border:2px solid black;
+	width: 150px;
+	font-size: 25px;
+	background-color: #AFAFAF;
+}
+.table
+{
+	width:450px;
+
+	min-height:50px;
+	background-color: #AFAFAF;
+}
+.user
+{
+	width: 360px;
+	min-height: 50px;
+	background-color: #AFAFAF;
+}
+.body
+{
+	width: 1200px;
+	min-height: 2000px;
+	background-color: white;
+	border-radius: 22px;
+	background-color: #FEEED7;
+	margin: auto;
+}
+.bodyads
+{
+	width: 1200px;
+	min-height: 1200px;
+	background-color: white;
+	border-radius: 22px;
+	background-color: #FEEED7;
+	margin: auto;
+}
+.bodyOffice
+{
+	width: 1200px;
+	min-height: 800px;
+	background-color: white;
+	border-top-left-radius: 22px;
+	border-top-right-radius: 22px;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
+	background-color: #FEEED7;
+	margin: auto;
+}
+.logo
+{
+	width: 300px;
+	height: 60px;
+	margin: auto;
+	background-position: center;
+	background-size: 800px 70px;
+	
+}
+
+.head
+{
+	width: 1200px;
+	height: 60px;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	font-family: "title_font";
+	background-color: #121824;
+	border-top-right-radius: 22px;
+	border-top-left-radius: 22px;
+	
+}
+.content
+{
+	width: 1200px;
+	
+	min-height: 2000px;
+}
+.contentOffice
+{
+	width: 1200px;
+	display: flex;
+	min-height: 800px;
+}
+.contentads
+{
+	width: 1200px;
+	height: 1200px;
+}
+.height_menu
+{
+	width: 1200px;
+	height: 40px;
+	display: flex;
+	background-color: #4D3E35;
+
+}
+
+.we,
+.world,
+.my_office,
+.mechanics,
+.ads,
+.update_news
+{
+	height: 40px;
+	width: 190px;
+	border-right:2px white solid;
+	font-family: "LagodaClassic";
+  	text-align: center;
+  	font-size: 25px;
+
+  	
+}
+.my_office
+{
+	font-size: 20px;
+}
+.ads
+{
+	font-size: 24px;
+}
+.we
+{
+	border-right:none
+	
+}
+.gameorder
+{
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+.contentwe{
+	width: 1200px;
+	height: 1000px;
+}
+.bodywe
+{
+    width: 1200px;
+	min-height: 900px;
+	background-color: white;
+	border-radius: 22px;
+	background-color: #FEEED7;
+	margin: auto;
+}
+.bodymeh
+{
+	width: 1200px;
+	min-height: 600px;
+	background-color: white;
+	border-radius: 22px;
+	background-color: #FEEED7;
+	margin: auto;
+}
+.contentmeh
+{
+	width: 1200px;
+	height: 600px;
+}
+.we_text
+{
+	width:800px;
+	height:650px;
+	border-top-left-radius:22px; 
+	border-bottom-right-radius:22px;
+	margin: auto;
+	margin-top:100px;
+	font-family: "FOR_NEWS";
+	font-size: 25px;
+	color: #BFBFB1;
+	background-color: #22272B;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+.mechanics_content
+{
+	width: 950px;
+	height: 400px;
+	background-color: #8E9297;
+	border-radius: 15px;
+	margin-top: 50px;
+	margin-left: 110px;
+	display: flex;
+}
+.world_text
+{
+	width:1000px;
+	height:100px;
+	border-top-left-radius:22px; 
+	border-bottom-right-radius:22px;
+	margin-top: 25px;
+	margin-left:33px;
+	color: #BFBFB1;
+	background-color: #22272B;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+.mechanics_text
+{
+	width:550px;
+	height:350px;
+	border-top-left-radius:22px; 
+	border-bottom-right-radius:22px;
+	margin-top: 25px;
+	margin-left:33px;
+	color: #BFBFB1;
+	background-color: #22272B;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+
+.a1
+{
+	width: 5px;
+}
+
+
+.new
+{
+	width: 1080px;
+	min-height: 200px;
+	background-color: #22272B;
+	border-radius: 15px;
+	margin-top: 50px;
+	margin-left: 55px;
+}
+
+.what
+{
+	color: black;
+	width: 500px;
+	min-height: 50px;
+	font-size: 43px;
+	text-align: center;
+	background-image: url(image/paper.png);
+	border-top-right-radius:22px;
+	background-color:#D7D9DA;
+	font-family: "Typewritten";
+}
+.news_text
+{
+	margin-left: 15px;
+	color: #BFBFB1;
+	font-family: "FOR_NEWS";
+}
+.futer 
+{
+	width: 1200px;
+	height: 50px;
+	text-align: center;
+	background-color: #121824;
+	margin: auto;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
+}
+.futer > a 
+{
+	color: red;
+	margin-left:5px; 
+	margin: auto;
+}
+.ures_Office
+{
+	width: 250px;
+    height: 650px;
+    background:url(image/Left_menu.png);
+    padding: none;
+    left: 10px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 25px;
+    
+}
+.time_ads_game
+{
+	width:75%;
+	height: 100px;
+	border:2px solid black;
+	background-color:#22272B;
+	border-bottom-right-radius:25px;
+	margin-bottom:50px;
+}
+.ads_text
+{
+ font-family:"FOR_NEWS";
+}
+.description_ads
+{
+ width:75%;
+ height: 100px;
+ font-family:"FOR_NEWS";
+ font-size: 20px;
+ background-color: #D7D9DA;
+}
+.submit_allowance
+{
+	width: 150px;
+	float: left;
+}
+.submit_allowance:nth-child(3)
+{
+ margin-left: 45px;
+}
+
+.content_menu
+{
+	width: 240px;
+	height: 440px;
+	text-align: center;
+	color: white;	
+}
+
+@font-face{
+	font-family: "title_font";
+	src: url(fonts/18500.otf);
+}
+@font-face{
+	font-family: "FOR_NEWS";
+	src: url(fonts/test_fonts1.ttf);
+}
+@font-face{
+	font-family: "title";
+	src: url(fonts/Titel.ttf);
+}
+@font-face{
+	font-family: "Typewritten";
+	src: url(fonts/Typewritten.ttf);
+}
+@font-face{
+	font-family: "LagodaClassic";
+	src: url(fonts/LagodaClassic.otf);
+}
