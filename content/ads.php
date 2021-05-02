@@ -35,21 +35,21 @@ $out=mysqli_fetch_array($run_out_ads);
 					Где(у кого):У Мастера Паши.<br>
 					Герои:Тихий чёрт<br>
 				</div>
-					<div class="time_ads_game"><script src="//megatimer.ru/get/5f49b7e980738dd3d44c6c5ab1acdc40.js"></script></div>
+					<div class="time_ads_game"></script></div>
 				<h1 class="ads_text">ИГРА С ПРОГРАММИСТАМИ</h1>
 				<div class=" description_ads">
 					Описание:<?=$out['campani']?>.<br>
 					Где(у кого):<?=$out['place']?>.<br>
 					Герои:<?=$out['heros']?><br>
 				</div>	
-					<div class="time_ads_game"><script src="//megatimer.ru/get/5f49b7e980738dd3d44c6c5ab1acdc40.js"></script></div>
+					<div class="time_ads_game">></script></div>
 				<h1 class="ads_text">ИГРА С ДИЗАЙНЕРАМИ</h1>
 				<div class=" description_ads">
 					Описание:-.<br>
 					Где(у кого):-.<br>
 					Герои:-.<br>
 				</div>	
-					<div class="time_ads_game"><script src="//megatimer.ru/get/5f49b7e980738dd3d44c6c5ab1acdc40.js"></script></div>
+					<div class="time_ads_game"></script></div>
 					
 			</div>
 			<div class="futer">
