@@ -305,7 +305,7 @@ session_start();
 									echo "<form method=POST>
 											<span>Изменения пользователей</span>
 											<input type=text name=heros placeholder=герои value=$out[heros]>
-											<input type=text name=campani placeholder=компания value="$out[campani]"> 
+											<input type=text name=campani placeholder=компания value='"$out[campani]"'> 
 											<input type=text name=place placeholder=место value=$out[place]>
 											<input type=text name=place placeholder=укого value=$out[who]>
 											<div class=fon>
