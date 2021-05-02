@@ -304,12 +304,12 @@ session_start();
 									echo "<div class=part3>";
 									echo "<form method=POST>
 											<span>Изменения пользователей</span>
-											<input type=text name=heros placeholder=герои value='$out[heros]'>
-											<input type=text name=campani placeholder=компания value='$out[campani]'> 
-											<input type=text name=place placeholder=место value='$out[place]'>
-											<input type=text name=place placeholder=укого value='$out[who]'>
+											<input type=text name='heros' placeholder='герои' value='$out[heros]'>
+											<input type=text name='campani' placeholder='компания' value='$out[campani]'> 
+											<input type=text name='place' placeholder='место' value='$out[place]'>
+											<input type=text name='who' placeholder='у кого' value='$out[who]'>
 											<div class=fon>
-											<input type=submit name=edit value=изменить class=knopca>
+											<input type=submit name='edit' value='Изменить' class=knopca>
 											</div>
 											<a href=?ads=edit_complite >Убрать меню измений</a>
 										</form>";				
