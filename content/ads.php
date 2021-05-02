@@ -15,7 +15,7 @@ $out=mysqli_fetch_array($run_out_ads);
 	<meta charset="utf-8">
 </head>
 <body>
-		<div class="bodyads">
+		<div class="bodyads" style="display: none !important;">
 			<div class="head">Geek's Haven</div>
 						<!-- или Глашатай крафтового издания Днд еще не решил -->
 
