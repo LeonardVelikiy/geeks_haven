@@ -296,7 +296,7 @@ session_start();
 								{
 									$str_edit_ads="UPDATE `ads` SET `heros`= '$_POST[heros]', `campani` = '$_POST[campani]', `place` = '$_POST[place]', `who` = '$_POST[who]' WHERE `id` = $ads_edit;";
 									
-									var_dump($str_edit_ads);
+									// var_dump($str_edit_ads);
 
 									$run_edit_ads=mysqli_query($connect,$str_edit_ads);
 									
