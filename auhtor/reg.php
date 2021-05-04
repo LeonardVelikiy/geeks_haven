@@ -50,7 +50,11 @@ session_start();
 		print_r($str_players);
 		if ($run_add_players) 
 		{
-			echo"добро пожаловать";
+			$_SESSION['user']=[
+				"name" =>$user['name'],
+				"login" =>$user['login']
+			];
+			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
 				{
