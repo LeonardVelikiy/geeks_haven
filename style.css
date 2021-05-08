@@ -419,7 +419,15 @@ width: 680px;
 	background-color: #4D3E35;
 
 }
-
+.height_menu > div > a 
+{
+	text-decoration:none;
+	color: white;
+}
+.height_menu > div > a:hover
+{	
+	color: black;
+}
 .we,
 .world,
 .my_office,
