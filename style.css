@@ -431,9 +431,199 @@ width: 680px;
 	font-family: "LagodaClassic";
   	text-align: center;
   	font-size: 25px;
-
   	
 }
+/*Office*/
+.telo_office
+{
+	 width: 95%;
+	 margin-top:25px; 
+	 height: 850px;
+	 margin-left: 2.5%;
+	 border: 2px solid black;
+	 display: flex;
+	 background: url(../image/back_fon.png);
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-size: 900px 600px;
+}
+.ava
+{
+	width:240px;
+	height:100%;
+	background: url(../image/Left_menu_new.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 240px 100%;
+	margin-top:10px;
+	margin-left: 20px;  
+}
+
+.avatarka_guchi
+{
+	width: 200px;
+	height: 200px;
+	border:2px solid black;
+	background-color: gray;
+	margin:100px auto;
+}
+.info
+{
+	width:600px;
+	height:100%;
+	margin-left: 20px;
+	/*background: blue;*/
+}
+.hp
+{
+	width:90%;
+	height:100px;
+	margin-top:10px; 
+	display: flex;
+	
+
+}
+.stat
+{
+	width:240px;
+	height:100%;
+	margin-left: 10px;
+	margin-top:10px; 
+	
+}
+.characteristics
+{
+	width:100px;
+	height:74%;
+	margin: auto;
+	margin-bottom: 18px;
+	background-color: #988F81;
+	border:2px solid black;
+	
+}
+.characteristics > div > a
+{
+	font-size: 45px;
+}
+
+.stats_hero_strong
+{
+	background: url(../image/strong.png);
+}
+.stats_hero_dexterity
+{
+	background: url(../image/palm.png);
+}
+.stats_hero_intelligence
+{
+	background: url(../image/intelligence.png);
+}
+.stats_hero_wisdom
+{
+	background: url(../image/wisdom.png);
+}
+.stats_hero_endurance
+{
+	background: url(../image/endurance.png);
+}
+.stats_hero_charisma
+{
+	background: url(../image/charisma.png);
+}
+.stats_hero_strong,
+.stats_hero_dexterity,
+.stats_hero_intelligence,
+.stats_hero_wisdom,
+.stats_hero_endurance,
+.stats_hero_charisma
+{
+	width: 100px;
+	height: 80px;
+	padding-top:20px;
+	margin-bottom:3.3px; 
+	font-size: 25px;
+	border: 1px solid black;
+	font-family: "Typewritten";
+	text-align: center;
+	color: white;
+	background-position: center;
+	background-size: 100px 100px; 
+}
+.count
+{
+	width:200px;
+	height:13%;
+	border:2px solid black;
+	margin: auto;
+	font-size: 35px;
+	color: #E7D800;
+	text-align: center;
+	padding-top: 50px;
+	background: url(../image/gold_count.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 200px 190px;
+	background-color: gray;
+}
+
+.h_P,
+.kb,
+.lvl,
+.inspiration
+{
+	height: 70px;
+	width: 90px;
+	padding-top: 20px;
+	margin-left: 35px;
+	text-align: center;
+	font-size: 45px;
+	border: 2px solid black;
+	
+}/* inspiration-вдохновение*/
+.h_P
+{
+	margin-left: 55px;
+	background: url(../image/hp.png);
+	background-size: 90px 90px;
+	background-position: center;
+	background-color: #808080;
+}
+.kb
+{
+	background: url(../image/kb.png);
+	background-size: 90px 90px;
+	background-position: center;
+	background-color: #808080;
+}
+.lvl
+{
+	background: url(../image/LVL.png);
+	background-size: 100px 130px;
+	background-position: center;
+	background-color: #808080;
+}
+.inspiration
+{
+	background: url(../image/inspiration.png);
+	background-size: 90px 90px;
+	background-position: center;
+	background-color: #808080;
+}
+.stuff
+{
+	width: 85%;
+	height: 650px;
+	border: 2px solid black;
+	margin: 62.5px auto;
+	background: url(../image/stuff_box.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 400px 250px;
+	background-color:rgba(0,0,0, 0.6);
+}
+
+/*Office*/
+
 .my_office
 {
 	font-size: 20px;
