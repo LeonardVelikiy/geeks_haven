@@ -4,6 +4,6 @@ $exit=$_POST['exit'];
 	if ($exit) 
 		{
 			session_unset();
-			header('Location: ../index.php');
+			header('Location: ../../index.php');
 		}
 ?>
