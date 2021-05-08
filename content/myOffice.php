@@ -11,15 +11,7 @@ $users_login=$_SESSION['user']['login'];
 
 if(!$_SESSION['user'])
 {
-	echo "<div class=reg_panel>
-			<form method=POST action=vendor/enter.php >
-				<label>логин</label>
-				<input type=text name=login>
-				<label>пароль</label>
-				<input type=password name=pass>
-				<input type=submit name=enter>
-				<a href=register.php>Зарегистрироваться</a>
-			</form></div>";
+	echo "../auhtor/sigin.php";
 	
 } else {
 		$str_heros_players="SELECT * FROM `heros` JOIN `players_and_masters` ON heros.owner_id=players_and_masters.id WHERE players_and_masters.login='$users_login'";
