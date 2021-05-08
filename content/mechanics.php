@@ -15,7 +15,7 @@
 				<div class="height_menu">
 					<div class="update_news"><a href="../index.php">новости</a></div>
 					<div class="ads"><a href="ads.php">объявления игр</a></div>
-					<div class="my_office"><a href="../auhtor/sigin.php">Кабинет Мастера</a></div>
+					<div class="my_office"><a href="../auhtor/sigin.php">мой кабинет</a></div>
 					<div class="mechanics"><a href="mechanics.php">МЕХАНИКИ</a></div>
 					<div class="world"><a href="world.php">о мире</a></div>
 					<div class="we"><a href="we.php">о нас</a></div>

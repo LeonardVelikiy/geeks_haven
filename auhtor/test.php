@@ -16,6 +16,10 @@
 			$user= mysqli_fetch_assoc($run_auth);
 			if ($user['role']==1) {
 				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
+				$_SESSION['user']=[
+					"name" =>$user['name'],
+					"login" =>$user['login']
+				];
 			}else
 			{
 				$_SESSION['user']=[
