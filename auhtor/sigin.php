@@ -21,6 +21,8 @@ session_start();
 	<a href=?exit=acc style=text-decoration:underline; color: gray;>Выйти из аккаунта</a>
 </div>
 </div>";
+}else{
+	echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 }
 	?>
 <?php
