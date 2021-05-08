@@ -18,7 +18,7 @@ session_start();
 				<div class="height_menu">
 					<div class="update_news"><a href="index.php">НОВОСТИ</a></div>
 					<div class="ads"><a href="content/ads.php">объявления игр</a></div>
-					<div class="my_office"><a href="../auhtor/sigin.php">Кабинет Мастера</a></div>
+					<div class="my_office"><a href="../auhtor/sigin.php">мой кабинет</a></div>
 					<div class="mechanics"><a href="content/mechanics.php">механики</a></div>
 					<div class="world"><a href="content/world.php">о мире</a></div>
 					<div class="we"><a href="content/we.php">о нас</a></div>
