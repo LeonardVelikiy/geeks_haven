@@ -49,7 +49,7 @@ if(!$_SESSION['user'])
 <form method=POST action=vendor/exit.php>
 	<input type=submit name=exit value=выйти </input>
 </form>";
-};echo'</div>
+};      echo'</div>
 			<div class="futer"></div>
 		</div>
 </body>
