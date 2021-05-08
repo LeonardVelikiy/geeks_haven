@@ -26,7 +26,7 @@
 					"name" =>$user['name'],
 					"login" =>$user['login']
 				];
-				echo '<script>location.replace("../index.php");</script>'; exit;
+				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 			}
 						
 		}else
