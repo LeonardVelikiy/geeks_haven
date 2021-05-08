@@ -17,10 +17,7 @@ if(!$_SESSION['user'])
 		$str_heros_players="SELECT * FROM `heros` JOIN `players_and_masters` ON heros.owner_id=players_and_masters.id WHERE players_and_masters.login='$users_login'";
 		$run_heros_players=mysqli_query($connect,$str_heros_players);
 		$infor_heros=mysqli_fetch_assoc($run_heros_players);
-		echo "<pre>";
-		print_r($str_heros_players);
-		print_r($infor_heros);
-		echo "</pre>";
+		
 
 		echo"
 			<div class=telo_office>
