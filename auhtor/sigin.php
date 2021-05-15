@@ -1,19 +1,21 @@
 <?php
 session_start();
-
-
-
-
-if ($user['role']==1) {
-	echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
-}else
-{
-	echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
-}
 ?>
-
 <link rel=stylesheet type=text/css href=../style.css>
 <div class="sigin">
+<?php
+	if ($user['role']==1) 
+	{
+		echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
+	}elseif($user['role']==0)
+		{
+			echo '<script>location.replace("../content/myOffice.php");</script>';exit;
+		}else
+		{
+
+		}
+?>
+
 
 <?php if(!$_SESSION['user']){
 	echo"<form method=POST action=test.php>
