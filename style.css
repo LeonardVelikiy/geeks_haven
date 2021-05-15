@@ -398,6 +398,12 @@ width: 680px;
 {
 	width: 1200px;
 	min-height: 2000px;
+
+}
+.contentworld > .world_text
+{
+	width: 1200px;
+	min-height: 2000px;
 	margin: auto;
 }
 .contentOffice
