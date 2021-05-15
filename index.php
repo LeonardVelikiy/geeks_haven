@@ -68,7 +68,7 @@ session_start();
 						$int_count++;
 					}
 					for ($i=0; $i <$int_count ; $i++) { 
-						echo"<a href=/?page_number=$i> $p</a>";
+						echo"<a href=/?page_number=$i>  $p</a>";
 						$p++;
 					}
 					/*пагинация*/
