@@ -28,7 +28,7 @@ $out=mysqli_fetch_array($run_out_ads);
 					<div class="world"><a href="world.php">о мире</a></div>
 					<div class="we"><a href="we.php">о нас</a></div>
 				</div>
-				<div class="gameorder">Здравствуйте <?=$_SESSION['user']['name']?> не хотите ли заказать игру вне расписания?<a href="../auhtor/order.php">Заказать</a></div>
+				<div class="gameorder">Здравствуйте, <?=$_SESSION['user']['name']?> не хотите ли заказать игру вне расписания ?<a href="../auhtor/order.php">Заказать</a></div>
 				<h1 class="ads_text">ИГРА С СЕЛЬСКИМИ</h1>
 				<div class=" description_ads">
 					Описание:Падение Сигансины глава три.<br>
