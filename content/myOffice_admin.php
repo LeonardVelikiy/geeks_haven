@@ -317,8 +317,9 @@ session_start();
 
 				?>
 	</div>
-	</div>
 	<div class="futer"></div>
+	</div>
+	
 </div>
 
 	
