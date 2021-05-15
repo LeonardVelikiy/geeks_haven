@@ -5,10 +5,12 @@ session_start();
 ?>
 
 <link rel=stylesheet type=text/css href=../style.css>
-<div class="sigin">
+
 
 <?php if(!$_SESSION['user']){
-	echo"<form method=POST action=test.php>
+	echo"
+	<div class=sigin>
+	<form method=POST action=test.php>
 	<label>Логин</label>
 	<input type=text name=login>
 	<label>Пароль</label>
