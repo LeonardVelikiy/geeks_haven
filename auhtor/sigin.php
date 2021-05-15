@@ -28,9 +28,12 @@ session_start();
 	if ($role==1)
 	{
 		echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
-	}else
+	}elseif($role==0)
 		{
 			echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
+		}else
+		{
+			
 		}
 
 
