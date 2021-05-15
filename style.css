@@ -387,17 +387,18 @@ width: 680px;
 	border-top-left-radius: 22px;
 	
 }
-.contentworld
-{
-	width: 1200px;
-	margin: auto;
-	min-height: 2000px;
-}
+
 .content
 {
 	width: 1200px;
 	
 	min-height: 2000px;
+}
+.contentworld
+{
+	width: 1200px;
+	min-height: 2000px;
+	margin: auto;
 }
 .contentOffice
 {
