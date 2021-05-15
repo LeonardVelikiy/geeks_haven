@@ -27,7 +27,7 @@ session_start();
 	if ($_SESSION['user']['role']==1) 
 	{
 		echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
-	}elseif
+	}else
 		{
 			echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 		}
