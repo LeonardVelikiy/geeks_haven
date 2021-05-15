@@ -21,7 +21,7 @@
 					"login" =>$user['login'],
 					"role" =>$user['role']
 				];
-				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
+				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 			}else
 			{
 				$_SESSION['user']=[
