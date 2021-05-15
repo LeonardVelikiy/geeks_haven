@@ -22,9 +22,10 @@ session_start();
 	<a href=?exit=acc style=text-decoration:underline; color: gray;>Выйти из аккаунта</a>
 </div>
 </div>";
-}else{
-	
-	if ($_SESSION['user']['role']==1) 
+}else
+{
+	$role=$_SESSION['user']['role']
+	if ($role==1)
 	{
 		echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
 	}else
@@ -42,7 +43,6 @@ $enter=$_POST['enter'];
 		unset($_SESSION['user']);
 		echo '<script>location.replace("../index.php");</script>'; exit;
 	}
-
 
 ?>
 
