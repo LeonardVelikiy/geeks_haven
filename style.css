@@ -810,8 +810,9 @@ width: 680px;
 .futer > a 
 {
 	color: red;
-	margin-left:5px; 
+	margin-left:15px;
 	margin: auto;
+	text-decoration: none;
 }
 .ures_Office
 {
