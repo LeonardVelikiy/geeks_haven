@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+
+
+
+if ($user['role']==1) {
+	echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
+}else
+{
+	echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
+}
 ?>
 
 <link rel=stylesheet type=text/css href=../style.css>
