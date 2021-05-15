@@ -399,6 +399,7 @@ width: 680px;
 {
 	width: 1200px;
 	min-height: 800px;
+	display: flex;
 }
 .contentads
 {

@@ -22,7 +22,7 @@ session_start();
 					<div class="world"><a href="world.php">о мире</a></div>
 					<div class="we"><a href="we.php">о нас</a></div>
 				</div>
-				<div class="contentOffice">	
+				<div class=".contentOffice_admin">	
 					<div class="menu">
 					<form>	
 						<a href="?news=exists_news">Новости</a>
