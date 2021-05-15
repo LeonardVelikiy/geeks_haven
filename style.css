@@ -155,7 +155,11 @@ width: 680px;
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
-	
+
+}
+.part2 > table
+{
+	max-width: 390px;
 }
 .part3
 {
