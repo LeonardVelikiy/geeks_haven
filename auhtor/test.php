@@ -14,13 +14,14 @@
 		if ($check_users) 
 		{
 			$user= mysqli_fetch_assoc($run_auth);
-			if ($user['role']==1) {
-				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
+			if ($user['role']==1) 
+			{
 				$_SESSION['user']=[
 					"name" =>$user['name'],
 					"login" =>$user['login'],
 					"role" =>$user['role']
 				];
+				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
 			}else
 			{
 				$_SESSION['user']=[
