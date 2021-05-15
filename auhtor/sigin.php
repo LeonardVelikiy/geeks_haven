@@ -22,6 +22,7 @@ session_start();
 	<a href=?exit=acc style=text-decoration:underline; color: gray;>Выйти из аккаунта</a>
 </div>
 </div>";
+var_dump($_SESSION['user']);
 }else
 {
 	$role=$_SESSION['user']['role'];
