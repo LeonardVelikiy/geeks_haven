@@ -1,20 +1,7 @@
 <?php
 session_start();
 
-	var_dump($_SESSION['user']);
-	if($_SESSION['user'])
-	{
-		if ($_SESSION['user']['role']==1) 
-		{
-				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
-		}elseif
-			{
-				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
-			}
-	}else
-		{
 
-		}
 ?>
 
 <link rel=stylesheet type=text/css href=../style.css>
