@@ -11,7 +11,7 @@
 			<div class="head">Geek's Haven</div>
 					
 
-			<div class="content">
+			<div class="contentworld">
 				<div class="height_menu">
 					<div class="update_news"><a href="../index.php">новости</a></div>
 					<div class="ads"><a href="ads.php">объявления игр</a></div>
