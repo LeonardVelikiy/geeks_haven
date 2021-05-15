@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-
+	var_dump($_SESSION['user']);
 	if($_SESSION['user'])
 	{
 		if ($_SESSION['user']['role']==1) 
 		{
 				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
-		}else
+		}elseif
 			{
 				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 			}
