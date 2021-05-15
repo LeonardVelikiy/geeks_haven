@@ -18,13 +18,15 @@
 				echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
 				$_SESSION['user']=[
 					"name" =>$user['name'],
-					"login" =>$user['login']
+					"login" =>$user['login'],
+					"role" =>$user['role']
 				];
 			}else
 			{
 				$_SESSION['user']=[
 					"name" =>$user['name'],
-					"login" =>$user['login']
+					"login" =>$user['login'],
+					"role" =>$user['role']
 				];
 				echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
 			}
