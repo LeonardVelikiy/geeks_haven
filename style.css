@@ -149,12 +149,12 @@ width: 680px;
 }
 .part2
 {
-	width: 390px;
+	max-width: 390px;
 	max-height: 620px;
 	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-y:scroll;
 
 }
 
