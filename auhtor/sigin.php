@@ -23,7 +23,16 @@ session_start();
 </div>
 </div>";
 }else{
-	echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
+	
+	if ($_SESSION['user']['role']==1) 
+	{
+		echo '<script>location.replace("../content/myOffice_admin.php");</script>'; exit;
+	}elseif
+		{
+			echo '<script>location.replace("../content/myOffice.php");</script>'; exit;
+		}
+
+
 }
 	?>
 <?php
