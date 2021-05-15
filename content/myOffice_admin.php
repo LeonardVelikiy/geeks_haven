@@ -175,7 +175,7 @@ session_start();
 
 							$str_out_players="SELECT * FROM `players_and_masters`";
 							$run_out_players=mysqli_query($connect,$str_out_players);
-						 	echo "<table border=1 cellspacing=0 class=table-dark>
+						 	echo "<table border=1 cellspacing=0 class=table-dark id=table1>
 								<tr>
 									<th>логин
 									<th>пароль
