@@ -100,8 +100,7 @@ width: 680px;
 	flex-direction: column;
 	width: 200px;
 	color: black;
-	cursor: pointer;
-	min-height: 800px;
+	min-height: 700px;
 	margin: 50px;
 }
 .infor >.part1 > form >span
@@ -112,6 +111,7 @@ width: 680px;
 {
 	font-family: "Typewritten";
 	font-size: 20px;
+	cursor: pointer;
 	border: none;
 	background-color: transparent;
     border-bottom: 2px solid black;
@@ -147,10 +147,10 @@ width: 680px;
 }
 .part2
 {
-	max-width: 500px;
+	max-width: 650px;
 	max-height: 620px;
 	margin-top: 50px;
-	border: 2px solid black;
+	
 	display: flex;
 	flex-direction: column;
 	overflow-y:scroll;
