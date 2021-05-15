@@ -23,7 +23,7 @@ session_start();
 					<div class="world"><a href="content/world.php">о мире</a></div>
 					<div class="we"><a href="content/we.php">о нас</a></div>
 				</div>
-				<div class="gameorder">Здравствуйте <?=$_SESSION['user']['name']?> добро пожаловать на Geek's Haven</div>
+				<div class="gameorder">Здравствуйте, <?=$_SESSION['user']['name']?> добро пожаловать на Geek's Haven</div>
 
 				<?php
 					include 'db.php';
