@@ -179,7 +179,6 @@ session_start();
 								<tr>
 									<th>логин
 									<th>пароль
-									<th>почта
 									<th colspan=2>Действия
 								</tr>
 							";
@@ -190,7 +189,6 @@ session_start();
 								<tr>	
 									<td>$out[login]
 									<td>$out[pass]
-									<td>$out[mail]
 									<td><a href=?players=$out[id]>Удалить</a>
 									<td><a href=?players_edit=$out[id]>изменить</a>
 								</tr>";
