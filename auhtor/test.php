@@ -14,8 +14,8 @@
 		if ($check_users) 
 		{
 			$user= mysqli_fetch_assoc($run_auth);
-			if ($user['role']==1) {
-				
+			if ($user['role']==1) 
+			{
 				$_SESSION['user']=[
 					"name" =>$user['name'],
 					"login" =>$user['login'],
