@@ -6,6 +6,8 @@ session_start();
 <head>
 	<title>Новости Днд</title>
 	<meta charset="utf-8">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> 
+	<meta name="msapplication-TileColor" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
