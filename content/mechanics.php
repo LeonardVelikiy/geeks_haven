@@ -23,7 +23,7 @@
 					<div class="world"><a href="world.php">о мире</a></div>
 					<div class="we"><a href="we.php">о нас</a></div>
 				</div>
-				<div  class="mechanics_content table-dark">
+				<div  class="table-dark mechanics_content">
 					<div class="a1" ></div>
 					<table border="2">
 					<tr>
