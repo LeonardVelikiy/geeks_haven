@@ -29,21 +29,21 @@ $out=mysqli_fetch_array($run_out_ads);
 					<div class="we"><a href="we.php">о нас</a></div>
 				</div>
 				<div class="gameorder">Здравствуйте, <?=$_SESSION['user']['name']?> не хотите ли заказать игру вне расписания ?<a href="../auhtor/order.php" style=color:red;text-decoration:none; > Заказать</a></div>
-				<h1 class="ad_text">ИГРА С СЕЛЬСКИМИ</h1>
+				<h1 class="obyvleniy_text">ИГРА С СЕЛЬСКИМИ</h1>
 				<div class=" description_ads">
 					Описание:Падение Сигансины глава три.<br>
 					Где(у кого):У Мастера Паши.<br>
 					Герои:Тихий чёрт<br>
 				</div>
 					<div class="time_ads_game"></script></div>
-				<h1 class="ad_text">ИГРА С ПРОГРАММИСТАМИ</h1>
+				<h1 class="obyvleniy_text">ИГРА С ПРОГРАММИСТАМИ</h1>
 				<div class=" description_ads">
 					Описание:<?=$out['campani']?>.<br>
 					Где(у кого):<?=$out['place']?>.<br>
 					Герои:<?=$out['heros']?><br>
 				</div>	
 					<div class="time_ads_game">></script></div>
-				<h1 class="ad_text">ИГРА С ДИЗАЙНЕРАМИ</h1>
+				<h1 class="obyvleniy_text">ИГРА С ДИЗАЙНЕРАМИ</h1>
 				<div class=" description_ads">
 					Описание:-.<br>
 					Где(у кого):-.<br>
