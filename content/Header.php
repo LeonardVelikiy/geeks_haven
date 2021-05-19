@@ -6,7 +6,7 @@ class Header
 		echo'
 			<html>
 				<head>
-					<title>Новсти по Днд</title>
+					<title>Новости по Днд</title>
 					<meta charset="utf-8">
 						<link rel="stylesheet" type="text/css" href="../style.css"></head>
 						<body>
