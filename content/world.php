@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> 
-<meta name="msapplication-TileColor" content="#ffffff">
 	<title>О мире</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<meta charset="utf-8">
