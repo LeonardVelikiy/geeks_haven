@@ -29,7 +29,7 @@ $out=mysqli_fetch_array($run_out_ads);
 					<div class="we"><a href="we.php">о нас</a></div>
 				</div>
 				<div class="gameorder">Здравствуйте, <?=$_SESSION['user']['name']?> не хотите ли заказать игру вне расписания ?<a href="../auhtor/order.php" style=color:red;text-decoration:none; > Заказать</a></div>
-				<h1 class="obyvleniy_text">ИГРА С СЕЛЬСКИМИ</h1>
+				<h1 class="obyvleniy_text" style="font-family:FOR_NEWS;">ИГРА С СЕЛЬСКИМИ</h1>
 				<div class=" description_ads">
 					Описание:Падение Сигансины глава три.<br>
 					Где(у кого):У Мастера Паши.<br>
