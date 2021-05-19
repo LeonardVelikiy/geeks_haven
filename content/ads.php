@@ -36,15 +36,15 @@ $out=mysqli_fetch_array($run_out_ads);
 					Герои:Тихий чёрт<br>
 				</div>
 					<div class="time_ads_game"></script></div>
-				<h1 class="obyvleniy_text">ИГРА С ПРОГРАММИСТАМИ</h1>
-				<div class=" description_ads">
+				<h1 class="obyvleniy_text" style="font-family:FOR_NEWS;">ИГРА С ПРОГРАММИСТАМИ</h1>
+				<div class="description_ads">
 					Описание:<?=$out['campani']?>.<br>
 					Где(у кого):<?=$out['place']?>.<br>
 					Герои:<?=$out['heros']?><br>
 				</div>	
 					<div class="time_ads_game">></script></div>
-				<h1 class="obyvleniy_text">ИГРА С ДИЗАЙНЕРАМИ</h1>
-				<div class=" description_ads">
+				<h1 class="obyvleniy_text" style="font-family:FOR_NEWS;">ИГРА С ДИЗАЙНЕРАМИ</h1>
+				<div class="description_ads">
 					Описание:-.<br>
 					Где(у кого):-.<br>
 					Герои:-.<br>
