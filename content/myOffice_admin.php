@@ -346,8 +346,8 @@ session_start();
 										<td><a href=?stuff=$out[id]>удалить</a>
 									</tr>";
 									}echo "</table>";
-						}echo "</div>";			
-
+						}		
+						echo "</div>";	
 				?>
 	</div>
 	<div class="futer"></div>
