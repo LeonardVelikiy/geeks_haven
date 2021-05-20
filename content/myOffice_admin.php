@@ -335,7 +335,7 @@ session_start();
 										<th >Действия
 									</tr>
 								";
-									while ($out=mysqli_fetch_array($run_out_order)) 
+									while ($out=mysqli_fetch_array($run_out_stuff)) 
 									{
 										$id++;
 										echo"
