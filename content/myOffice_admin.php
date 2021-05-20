@@ -346,7 +346,38 @@ session_start();
 										<td><a href=?stuff=$out[id]>удалить</a>
 									</tr>";
 									}echo "</table>";
-						}		
+						}	
+					if ($_GET['heros']) 
+					{
+						$heros=$_GET['heros'];
+						$str_del_heros="DELETE FROM `heros` WHERE id = $heros";
+						$run_del_heros=mysqli_query($connect,$str_del_heros);
+
+						$str_out_heros="SELECT * FROM `heros` JOIN players_and_masters ON owner_id=players_and_masters.id";
+						$run_out_heros=mysqli_query($connect,$str_out_heros);
+
+						echo "<table border=1 cellspacing=0 class=table-dark>
+									<tr>
+										<th>имя.Перс.
+										<th>уровень
+										<th>класс
+										<th>состояние
+										<th>место нахождения
+										<th>владелец
+									</tr>
+								";
+									while ($out=mysqli_fetch_array($run_out_heros)) 
+									{
+										$id++;
+										echo"
+									<tr>	
+										<td>$out[name]
+										<td>$out[price]
+										<td>$out[rarity]
+										<td><a href=?stuff=$out[id]>удалить</a>
+									</tr>";
+									}echo "</table>";
+						}	
 						echo "</div>";	
 				?>
 	</div>
