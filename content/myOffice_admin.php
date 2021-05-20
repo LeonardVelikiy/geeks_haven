@@ -316,8 +316,8 @@ session_start();
 											</div>
 											<a href=?ads=edit_complite >Убрать меню измений</a>
 										</form>";
-										echo "</div>";				
-					}
+														
+					}echo "</div>";
 					if ($_GET['stuff']) 
 					{
 						$stuff=$_GET['stuff'];
