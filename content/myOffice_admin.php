@@ -358,11 +358,11 @@ session_start();
 
 						echo "<table border=1 cellspacing=0 class=table-dark>
 									<tr>
-										<th>имя.Перс.
+										<th>Перс
 										<th>уровень
 										<th>класс
 										<th>состояние
-										<th>место нахождения
+										<th>Расположен
 										<th>владелец
 										<th>дейсвия
 									</tr>
