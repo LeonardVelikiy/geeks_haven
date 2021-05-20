@@ -371,9 +371,12 @@ session_start();
 										$id++;
 										echo"
 									<tr>	
+										<td>$out[name_hero]
+										<td>$out[lvl]
+										<td>-///-
+										<td>$out[hp]-hp
+										<td>-///-
 										<td>$out[name]
-										<td>$out[price]
-										<td>$out[rarity]
 										<td><a href=?stuff=$out[id]>удалить</a>
 									</tr>";
 									}echo "</table>";
