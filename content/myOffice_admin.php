@@ -364,6 +364,7 @@ session_start();
 										<th>состояние
 										<th>место нахождения
 										<th>владелец
+										<th>дейсвия
 									</tr>
 								";
 									while ($out=mysqli_fetch_array($run_out_heros)) 
