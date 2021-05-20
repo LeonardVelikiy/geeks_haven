@@ -29,6 +29,9 @@ session_start();
 						<a href="?order=exists_order">Заказы</a>
 						<a href="?players=exists_players">Игроки</a>
 						<a href="?ads=exists_ads">Объявления</a>
+						<a href="?stuff=stuff">Предметы</a>
+						<a href="?heros=heros">Персонажи</a>
+						<a href="?application=application">заявки на персов</a>
 						<a href="?exit=admin">Выйти</a>
 					</form>
 					</div>
