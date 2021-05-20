@@ -315,8 +315,38 @@ session_start();
 											<input type=submit name='edit' value='Изменить' class=knopca>
 											</div>
 											<a href=?ads=edit_complite >Убрать меню измений</a>
-										</form>";				
-					}				echo "</div>";
+										</form>";
+										echo "</div>";				
+					}
+					if ($_GET['stuff']) 
+					{
+						$stuff=$_GET['stuff'];
+						$str_del_stuff="DELETE FROM `stuff` WHERE id = $stuff";
+						$run_del_stuff=mysqli_query($connect,$str_del_stuff);
+
+						$str_out_stuff="SELECT * FROM `stuff`";
+						$run_out_stuff=mysqli_query($connect,$str_out_stuff);
+
+						echo "<table border=1 cellspacing=0 class=table-dark>
+									<tr>
+										<th>название предмета
+										<th>цена
+										<th>редкость
+										<th >Действия
+									</tr>
+								";
+									while ($out=mysqli_fetch_array($run_out_order)) 
+									{
+										$id++;
+										echo"
+									<tr>	
+										<td>$out[name]
+										<td>$out[price]
+										<td>$out[rarity]
+										<td><a href=?stuff=$out[id]>удалить</a>
+									</tr>";
+									}echo "</table>";
+						}				
 
 				?>
 	</div>
