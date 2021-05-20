@@ -44,10 +44,10 @@ span
 .menu
 {
 	width: 280px;
-	height: 580px;
+	height: 680px;
 	border: 2px solid black;
 	margin-left: 50px;
-	margin-top: 55px;
+	margin-top: 85px;
 	border-top-left-radius: 25px;
 	border-bottom-right-radius: 25px; 
 	background-color: #121824;
@@ -415,7 +415,7 @@ width: 680px;
 .contentOffice_admin
 {
 	width: 1200px;
-	min-height: 800px;
+	min-height: 900px;
 	display: flex;
 }
 .contentads
