@@ -660,7 +660,7 @@ width: 680px;
 {
 	width:	250px;
 	height: 500px;
-	
+	background-color:#121824 ;
 	margin-top: 55px;
 }
 .desk
@@ -670,24 +670,16 @@ width: 680px;
 	border: 1px solid black;
 	overflow-y: scroll;
 }
+.specifications_stuff,
+.price_stuff,
 .rarity_stuff
 {
 	width:	250px;
 	height: 30px;
 	border: 1px solid black;
+	color: #BFBFB1;
 }
-.price_stuff
-{
-	width:	250px;
-	height: 30px;
-	border: 1px solid black;
-}
-.specifications_stuff
-{
-	width:	250px;
-	height: 30px;
-	border: 1px solid black;
-}
+
 
 /*Office*/
 
