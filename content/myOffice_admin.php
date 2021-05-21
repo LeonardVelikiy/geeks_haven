@@ -355,7 +355,7 @@ session_start();
 						$run_infor_stuff=mysqli_query($connect,$str_infor_stuff);
 						$out=mysqli_fetch_array($run_infor_stuff);
 						echo"
-							<div class=desc_stuff1><img src=../image/$out[sprite]></div>
+							<div class=desc_stuff1 style=background:url(../image/$out[sprite]);></div>
 							<div class=desc_stuff2>
 								<div class=price_stuff>цена: $out[price]</div>
 								<div class=rarity_stuff>редкость: $out[rarity]</div>
