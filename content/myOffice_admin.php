@@ -340,7 +340,7 @@ session_start();
 										$id++;
 										echo"
 									<tr>	
-										<td>$out[name]
+										<td>$out[name_stuff]
 										<td>$out[price]
 										<td>$out[rarity]
 										<td><a href=?stuff=$out[id]>удалить</a>
