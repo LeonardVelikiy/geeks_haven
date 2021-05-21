@@ -357,10 +357,10 @@ session_start();
 						echo"
 							<div class=desc_stuff1>,</div>
 							<div class=desc_stuff2>
-								<div class=price_stuff>$out[price]</div>
-								<div class=rarity_stuff>$out[rarity]</div>
-								<div class=specifications_stuff>$out[specifications]</div>
-								<div class=desk>$out[description]</div>
+								<div class=price_stuff>цена: $out[price]</div>
+								<div class=rarity_stuff>редкость: $out[rarity]</div>
+								<div class=specifications_stuff>характ.: $out[specifications]</div>
+								<div class=desk>Описание: $out[description]</div>
 							</div>";
 
 					}
