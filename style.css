@@ -659,7 +659,7 @@ width: 680px;
 .desc_stuff2
 {
 	width:	250px;
-	height: 250px;
+	height: 260px;
 	border: 2px solid black;
 	margin-top: 55px;
 }
@@ -672,13 +672,13 @@ width: 680px;
 .rarity_stuff
 {
 	width:	250px;
-	height: 50px;
+	height: 30px;
 	border: 1px solid black;
 }
 .price_stuff
 {
 	width:	250px;
-	height: 50px;
+	height: 30px;
 	border: 1px solid black;
 }
 /*Office*/
