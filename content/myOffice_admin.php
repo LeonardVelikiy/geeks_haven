@@ -357,10 +357,11 @@ session_start();
 						echo"
 							<div  style=background:url(../image/$out[sprite]);background-size:250px300px;background-position:center;background-repeat:no-repeat; class=desc_stuff1></div>
 							<div class=desc_stuff2>
-								<div class=price_stuff>цена: $out[price]</div>
-								<div class=rarity_stuff>редкость: $out[rarity]</div>
-								<div class=specifications_stuff>характ.: $out[specifications]</div>
-								<div class=desk>Описание: $out[description]</div>
+								<div class=name_stuff>Название:$out[name_stuff]</div>
+								<div class=price_stuff>Цена: $out[price]</div>
+								<div class=rarity_stuff>Редкость: $out[rarity]</div>
+								<div class=specifications_stuff>Характ.: $out[specifications]</div>
+								<div class=desk>Описание:$out[description]</div>
 							</div>";
 
 					}
