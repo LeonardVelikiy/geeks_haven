@@ -355,8 +355,12 @@ session_start();
 						$run_infor_stuff=mysqli_query($connect,$str_infor_stuff);
 						$out=mysqli_fetch_array($run_infor_stuff);
 						echo"
-							<div class=desc_stuff1>$out[price],$out[rarity]</div>
-							<div class=desc_stuff2>$out[description]</div>		";
+							<div class=desc_stuff1>,</div>
+							<div class=desc_stuff2>
+								<div class=price_stuff>$out[price]</div>
+								<div class=rarity_stuff>$out[rarity]</div>
+								<div class=desk>$out[description]</div>
+							</div>		";
 
 					}
 					if ($_GET['heros']) 
