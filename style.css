@@ -668,6 +668,8 @@ width: 680px;
 	width:	250px;
 	height: 400px;
 	border: 1px solid black;
+	color: #BFBFB1;
+	font-family: "FOR_NEWS";
 	overflow-y: scroll;
 }
 .specifications_stuff,
