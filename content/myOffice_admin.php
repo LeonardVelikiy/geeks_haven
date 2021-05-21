@@ -332,7 +332,7 @@ session_start();
 										<th>название предмета
 										<th>цена
 										<th>редкость
-										<th >Действия
+										<th colspan=2>Действия
 									</tr>
 								";
 									while ($out=mysqli_fetch_array($run_out_stuff)) 
@@ -344,6 +344,7 @@ session_start();
 										<td>$out[price]
 										<td>$out[rarity]
 										<td><a href=?stuff=$out[id]>удалить</a>
+										<td><a href=?stuff_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
 						}	
@@ -378,7 +379,8 @@ session_start();
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
-										<td><a href=?stuff=$out[id]>удалить</a>
+										<td><a href=?heros=$out[id]>удалить</a>
+										<td><a href=?heros_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
 						}	
