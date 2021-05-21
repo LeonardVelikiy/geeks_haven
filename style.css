@@ -654,9 +654,7 @@ width: 680px;
 	height: 300px;
 	border: 2px solid black;
 	margin-left:150px;
-	background-size:100px 100px;
-	background-repeat: no-repeat;
-	background-position:center;
+	
 	margin-top: 55px;
 }	
 .desc_stuff2
