@@ -359,8 +359,9 @@ session_start();
 							<div class=desc_stuff2>
 								<div class=price_stuff>$out[price]</div>
 								<div class=rarity_stuff>$out[rarity]</div>
+								<div class=specifications_stuff>$out[specifications]</div>
 								<div class=desk>$out[description]</div>
-							</div>		";
+							</div>";
 
 					}
 					if ($_GET['heros']) 

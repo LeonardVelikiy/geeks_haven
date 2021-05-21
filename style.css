@@ -659,15 +659,16 @@ width: 680px;
 .desc_stuff2
 {
 	width:	250px;
-	height: 260px;
-	border: 2px solid black;
+	height: 500px;
+	
 	margin-top: 55px;
 }
 .desk
 {
 	width:	250px;
-	height: 200px;
+	height: 400px;
 	border: 1px solid black;
+	overflow-y: scroll;
 }
 .rarity_stuff
 {
@@ -681,6 +682,13 @@ width: 680px;
 	height: 30px;
 	border: 1px solid black;
 }
+.specifications_stuff
+{
+	width:	250px;
+	height: 30px;
+	border: 1px solid black;
+}
+
 /*Office*/
 
 .my_office
