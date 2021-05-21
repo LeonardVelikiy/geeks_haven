@@ -347,7 +347,18 @@ session_start();
 										<td><a href=?stuff_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
-						}	
+						}
+					if ($_GET['stuff_moreinfor'])
+					{
+						$stuff_moreinfor=$_GET['stuff_moreinfor'];
+						$str_infor_stuff="SELECT * FROM `stuff` WHERE id=$stuff_moreinfor";
+						$run_infor_stuff=mysqli_query($connect,$str_infor_stuff);
+						$out=mysqli_fetch_array($run_infor_stuff);
+						echo"
+							<div class=desc_stuff1>$out[price],$out[rarity]</div>
+							<div class=desc_stuff2>$out[description]</div>		";
+
+					}
 					if ($_GET['heros']) 
 					{
 						$heros=$_GET['heros'];
