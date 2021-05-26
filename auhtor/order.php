@@ -30,8 +30,8 @@ session_start();
 		echo "
 	<form method=POST >	
 	<span>Оформление заказа</span>
-	<input type=text name=login placeholder=имя >
-	<input type=text name=time placeholder=кол во часов игры>
+	<input type=text name=login placeholder='имя' >
+	<input type=text name=time placeholder='кол во часов игры'>
 	<input type=date name=date placeholder=дата>
 	<input type=text name=person placeholder=кол-во человек>
 	<input type=text name=place placeholder=место>
