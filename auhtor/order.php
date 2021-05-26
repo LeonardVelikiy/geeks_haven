@@ -33,9 +33,9 @@ session_start();
 	<input type=text name=login placeholder='имя' >
 	<input type=text name=time placeholder='кол во часов игры'>
 	<input type=date name=date placeholder=дата>
-	<input type=text name=person placeholder=кол-во человек>
+	<input type=text name=person placeholder='кол-во человек'>
 	<input type=text name=place placeholder=место>
-	<input type=text name=tell placeholder=номер телефона>
+	<input type=text name=tell placeholder='номер телефона'>
 	<input type=submit name=order value=заказать>
 	</form>";
 	}else
