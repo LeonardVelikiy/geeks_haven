@@ -401,7 +401,7 @@ session_start();
 									<tr>	
 										<td>$out[name_hero]
 										<td>$out[lvl]
-										<td>-///-
+										<td>$out[class]
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
@@ -437,7 +437,7 @@ session_start();
 									<tr>	
 										<td>$out[name_hero]
 										<td>$out[lvl]
-										<td>-///-
+										<td>$out[class]
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
