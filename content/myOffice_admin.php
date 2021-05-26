@@ -446,13 +446,8 @@ session_start();
 										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
 									</tr>";
 									}echo "</table>";
-									if ($_GET['hero_approve'])
-									{
 									
 									$id_hero_approve=$_GET['hero_approve'];
-
-									$str_approve_hero="SELECT * FROM `character_applications` WHERE `id_aplication` = '$id_hero_approve'";
-									$run_approve_hero=mysqli_query($connect,$str_approve_hero);
 
 									$out=mysqli_fetch_assoc($run_approve_hero);
 											
@@ -462,35 +457,7 @@ session_start();
 									$id_hero_approve_del=$_GET['hero_approve'];
 									$str_del_hero_approve="DELETE FROM `character_applications` WHERE id = $id_hero_approve_del";
 									$run_del_hero_approve=mysqli_query($connect,$str_del_hero_approve);
-									
-										echo "<table border=1 cellspacing=0 class=table-dark>
-										<tr>
-											<th>Перс
-											<th>уровень
-											<th>класс
-											<th>состояние
-											<th>расположен
-											<th>владелец
-											<th colspan=3 style=text-align:center;>дейсвия
-										</tr>
-									";
-									while ($out=mysqli_fetch_array($run_out_heros_applications)) 
-									{
-										$id++;
-										echo"
-									<tr>	
-										<td>$out[name_hero]
-										<td style=text-align:center;>$out[lvl]
-										<td>$out[class_hero]
-										<td>$out[hp]-hp
-										<td>-///-
-										<td>$out[login]
-										<td><a href=?heros_applications_del=$out[id_aplication]>удалить</a>
-										<td><a href=?heros_moreinfor=$out[id_aplication]>подробнее</a>
-										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
-									</tr>";
-									}echo "</table>";
-									}
+	
 						}	
 						echo "</div>";	
 				?>
