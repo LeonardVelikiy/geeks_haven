@@ -412,7 +412,7 @@ session_start();
 						}
 					if ($_GET['application']or$_GET['hero_approve']) 
 					{
-						$applications=$_GET['heros_applications_del'];
+						$heros_applications_del=$_GET['applications'];
 						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id = $heros_applications_del";
 						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
 
