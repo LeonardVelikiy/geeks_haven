@@ -443,6 +443,7 @@ session_start();
 										<td>$out[login]
 										<td><a href=?heros_applications_del=$out[id]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id]>подробнее</a>
+										<td><a href=?heros_moreinfor=$out[id]>одобрить</a>
 									</tr>";
 									}echo "</table>";
 						}	
