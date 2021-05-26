@@ -23,8 +23,7 @@ session_start();
 </html>
 <div class="header">Geek's Haven</div>
 <div class="regist">
-<form method="POST" ><!-- action="index.php" -->
-	
+<form method="POST" >
 	<span>Моя учётная Запись</span>
 	<input type="text" name="login" placeholder="логин">
 	<input type="password" name="pass" placeholder="пароль">
