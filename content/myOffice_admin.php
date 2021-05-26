@@ -413,7 +413,7 @@ session_start();
 					if ($_GET['application']or$_GET['hero_approve']) 
 					{
 						$heros_applications_del=$_GET['application'];
-						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id = $heros_applications_del";
+						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id_aplication = $heros_applications_del";
 						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
 
 						$str_out_heros_applications="SELECT * FROM `character_applications` JOIN players_and_masters ON owner_id=players_and_masters.id";
