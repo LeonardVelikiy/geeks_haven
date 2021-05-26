@@ -52,19 +52,21 @@ session_start();
 	if ($reg) {
 		$str_players="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,  `mail`) 
 			VALUES ('$login', '$pass', '$fam', '$name', '$gender','$mail_cum');";
-
 		$run_add_players=mysqli_query($connect,$str_players);
-		
-		
+
+		$str_chek_user_reg="SELECT * FROM `players_and_masters` WHERE `login` = '$login' AND `pass`= '$pass'";
+		$run_chek_user_reg=mysqli_query($connect,$str_auth);
+		$user=mysqli_fetch_assoc($run_chek_user_reg);
 		if ($run_add_players) 
 		{
-			$user=mysqli_fetch_assoc($run_add_players);
+			
 			$_SESSION['user']=[
                 "name" =>$user['name'],
                 "login" =>$user['login'],
                 "role" =>$user['role']
             ];
 			echo'<pre>';
+			print_r($str_chek_user_reg);
 			print_r($str_players);
 			var_dump($_SESSION['user']);
 			print_r($user);
