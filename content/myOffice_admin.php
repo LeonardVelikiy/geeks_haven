@@ -452,8 +452,9 @@ session_start();
 									$id_hero_approve=$_GET['hero_approve'];
 
 									$str_approve_hero="SELECT * FROM `character_applications` WHERE `id` = '$id_hero_approve'";
-									$run_approve_hero=mysqli_query($connect,$str_approve_hero);
 
+									$run_approve_hero=mysqli_query($connect,$str_approve_hero);
+										print_r($str_approve_hero);
 									$out=mysqli_fetch_assoc($run_auth);
 											
 									$str_players="INSERT INTO `heros` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
