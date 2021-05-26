@@ -55,7 +55,7 @@ session_start();
 
 		$run_add_players=mysqli_query($connect,$str_players);
 		
-		print_r($str_players);
+		
 		if ($run_add_players) 
 		{
 			$user=mysqli_fetch_assoc($run_add_players);
@@ -64,6 +64,8 @@ session_start();
                 "login" =>$user['login'],
                 "role" =>$user['role']
             ];
+			echo'<pre>';
+			print_r($str_players);
 			var_dump($_SESSION['user']);
 			print_r($user);
 			print_r($_SESSION);
