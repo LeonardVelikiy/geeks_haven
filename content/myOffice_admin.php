@@ -427,7 +427,7 @@ session_start();
 										<th>состояние
 										<th>расположен
 										<th>владелец
-										<th colspan=2>дейсвия
+										<th colspan=3 style=text-align:center;>дейсвия
 									</tr>
 								";
 									while ($out=mysqli_fetch_array($run_out_heros_applications)) 
