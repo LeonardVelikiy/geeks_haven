@@ -391,7 +391,7 @@ session_start();
 										<th>состояние
 										<th>расположен
 										<th>владелец
-										<th>дейсвия
+										<th colspan=2>дейсвия
 									</tr>
 								";
 									while ($out=mysqli_fetch_array($run_out_heros)) 
@@ -427,7 +427,7 @@ session_start();
 										<th>состояние
 										<th>расположен
 										<th>владелец
-										<th>дейсвия
+										<th colspan=2>дейсвия
 									</tr>
 								";
 									while ($out=mysqli_fetch_array($run_out_heros_applications)) 
