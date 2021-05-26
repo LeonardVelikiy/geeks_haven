@@ -1,7 +1,18 @@
 <?php
 session_start();
+include '../db.php';
+
+$login=$_SESSION['user']['login'];
+
+$str_auth="SELECT * FROM `players_and_masters` WHERE `login` = '$login'";
+
+$run_auth=mysqli_query($connect,$str_auth);
+
+$out=mysqli_fetch_assoc($run_auth);
+
 ?>
 <!DOCTYPE html>
+
 <link rel="stylesheet" type="text/css" href="../style.css">
 <html>
 	<head>
@@ -24,7 +35,7 @@ session_start();
 <div class="header">Geek's Haven</div>
 <div class="regist">
 <form method="POST" >
-	<span>Моя персонаж</span>
+	<span>персонаж <?=$out['login']?></span>
 	<input type="text" name="name_hero" placeholder='логин'>
 	<input type="text" name="class_hero" placeholder='класс'>
 	<input type="text" name="lvl" placeholder='уровень'>
@@ -41,8 +52,7 @@ session_start();
 	</form>
 </div>
 	<?php
-	include '../db.php';
-
+	
 
 	$name_hero=$_POST['name_hero'];
 	$class_hero=$_POST['class_hero'];
@@ -60,7 +70,7 @@ session_start();
 	$skill='none';
 	$reg=$_POST['reg'];
 	$owner_id=0;
-	
+
 	if ($reg) {
 		$str_players="INSERT INTO `character_applications` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
 					VALUES ('$name_hero', '$class_hero', '$magic', '$skill', '$gold', '$class_armor', '$hp', '$lvl', '$strong', '$dexterity', '$endurance', '$intelligence', '$wisdom', '$charisma', '$owner_id');";
