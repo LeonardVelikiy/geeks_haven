@@ -436,7 +436,7 @@ session_start();
 										echo"
 									<tr>	
 										<td>$out[name_hero]
-										<td>$out[lvl]
+										<td style=text-align:center;>$out[lvl]
 										<td>$out[class_hero]
 										<td>$out[hp]-hp
 										<td>-///-
