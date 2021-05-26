@@ -441,7 +441,7 @@ session_start();
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
-										<td><a href=?heros_applications_del=$out[id_aplication]>удалить</a>
+										<td><a href=?applications=$out[id_aplication]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id_aplication]>подробнее</a>
 										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
 									</tr>";
