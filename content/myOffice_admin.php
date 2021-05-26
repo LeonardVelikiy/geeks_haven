@@ -410,7 +410,7 @@ session_start();
 									</tr>";
 									}echo "</table>";
 						}
-					if ($_GET['heros_applications']) 
+					if ($_GET['application']) 
 					{
 						$heros_applications_del=$_GET['heros_applications_del'];
 						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id = $heros_applications_del";
