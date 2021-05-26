@@ -54,14 +54,15 @@ session_start();
 			VALUES ('$login', '$pass', '$fam', '$name', '$gender','$mail_cum');";
 
 		$run_add_players=mysqli_query($connect,$str_players);
+		$user= mysqli_fetch_assoc($run_add_players);
 		
-		print_r($str_players);
 		if ($run_add_players) 
 		{
 			$_SESSION['user']=[
-				"name" =>$user['name'],
-				"login" =>$user['login']
-			];
+                "name" =>$user['name'],
+                "login" =>$user['login'],
+                "role" =>$user['role']
+            ];
 			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
