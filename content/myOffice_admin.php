@@ -410,8 +410,20 @@ session_start();
 									</tr>";
 									}echo "</table>";
 						}
-					if ($_GET['application']or$_GET['hero_approve']) 
+					if ($_GET['application']or$_GET['hero_aprove']) 
 					{
+						
+						$id_hero_aprove=$_GET['hero_aprove'];
+						
+						$str_aprove_hero="SELECT * FROM `character_applications` WHERE id_aplication = $id_hero_aprove";
+						$run_aprove=mysqli_query($connect,$str_aprove_hero);
+
+						$out_aprove=mysqli_fetch_array($run_aprove);
+
+						$str_heros_aprove="INSERT INTO `heros` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
+										VALUES ('$out_aprove[name_hero]', '$out_aprove[class_hero]', '$out_aprovemagic]', '$out_aprove[skill]', '$out_aprove[gold_count]', '$out_aprove[class_armor]', '$out_aprove[hp]', '$out_aprove[lvl]', '$out_aprove[strong]', '$out_aprove[dexterity]', '$out_aprove[endurance]', '$out_aprove[intelligence]', '$out_aprove[wisdom]', '$out_aprove[charisma]', '$out_aprove[owner_id]');";
+						$run_heros_aprove=mysqli_query($connect,$str_heros_aprove);
+		
 						$heros_applications_del=$_GET['application'];
 						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id_aplication = $heros_applications_del";
 						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
@@ -447,16 +459,7 @@ session_start();
 									</tr>";
 									}echo "</table>";
 
-									if($_GET['hero_aprove'])
-									{
-									$id_hero_aprove=$_GET['hero_aprove'];
-											
-									$out=mysqli_fetch_array($run_out_heros_applications);
-
-									$str_heros_aprove="INSERT INTO `heros` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
-													VALUES ('$out[name_hero]', '$out[class_hero]', '$out[magic]', '$out[skill]', '$out[gold_count]', '$out[class_armor]', '$out[hp]', '$out[lvl]', '$out[strong]', '$out[dexterity]', '$out[endurance]', '$out[intelligence]', '$out[wisdom]', '$chariout[charisma]', '$out[owner_id]');";
-									$run_heros_aprove=mysqli_query($connect,$str_heros_aprove);
-									}
+									
 									
 	
 						}	
