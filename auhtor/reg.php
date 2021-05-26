@@ -49,33 +49,22 @@ session_start();
 	$gender=$_POST['gender'];
 	$reg=$_POST['reg'];
 	$mail_cum=$_POST['mail_cum'];
+	
 	if ($reg) {
 		$str_players="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,  `mail`) 
 			VALUES ('$login', '$pass', '$fam', '$name', '$gender','$mail_cum');";
 		$run_add_players=mysqli_query($connect,$str_players);
-
-		$str_chek_user_reg="SELECT * FROM `players_and_masters` WHERE `login` = '$login' AND `pass`= '$pass'";
-		$run_chek_user_reg=mysqli_query($connect,$str_auth);
-		$user=mysqli_fetch_assoc($run_chek_user_reg);
-		$check_users=mysqli_num_rows($run_chek_user_reg);
-		echo'<pre>';
-		print_r($str_chek_user_reg);
-		print_r($str_players);
-		
-		var_dump($user);
-		print_r($_SESSION);
 		if ($run_add_players) 
 		{
 			
 			$_SESSION['user']=[
-                "name" =>$user['name'],
-                "login" =>$user['login'],
-                "role" =>$user['role']
+                "name" =>$name,
+                "login" =>$login,
+                "role" =>0
             ];
 			var_dump($_SESSION['user']);
-			
-			
-			// echo '<script>location.replace("../index.php");</script>'; exit;
+		
+			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
 				{
