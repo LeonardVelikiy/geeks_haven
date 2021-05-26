@@ -64,6 +64,7 @@ session_start();
                 "login" =>$user['login'],
                 "role" =>$user['role']
             ];
+			var_dump($_SESSION['user']);
 			print_r($user);
 			print_r($_SESSION);
 			// echo '<script>location.replace("../index.php");</script>'; exit;
