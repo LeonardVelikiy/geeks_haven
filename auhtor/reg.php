@@ -67,14 +67,7 @@ session_start();
                 "role" =>$user['role']
             ];
 			echo'<pre>';
-			if ($check_users)
-			{
-			print_r($str_chek_user_reg);
-			print_r($str_players);
-			var_dump($_SESSION['user']);
-			var_dump($user);
-			print_r($_SESSION);
-			}
+			
 			
 			// echo '<script>location.replace("../index.php");</script>'; exit;
 			}
@@ -83,5 +76,12 @@ session_start();
 				echo"ошибка";
 			 	}
 		}
-
+		if ($check_users)
+			{
+			print_r($str_chek_user_reg);
+			print_r($str_players);
+			var_dump($_SESSION['user']);
+			var_dump($user);
+			print_r($_SESSION);
+			}
 	?>
