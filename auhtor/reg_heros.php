@@ -35,7 +35,7 @@ $out=mysqli_fetch_assoc($run_auth);
 <div class="header">Geek's Haven</div>
 <div class="regist">
 <form method="POST" >
-	<span>персонаж <?=$out['login']?></span>
+	<span>Мой персонаж</span>
 	<input type="text" name="name_hero" placeholder='логин'>
 	<input type="text" name="class_hero" placeholder='класс'>
 	<input type="text" name="lvl" placeholder='уровень'>
@@ -69,7 +69,7 @@ $out=mysqli_fetch_assoc($run_auth);
 	$magic='none';
 	$skill='none';
 	$reg=$_POST['reg'];
-	$owner_id=0;
+	$owner_id=$out['id'];
 
 	if ($reg) {
 		$str_players="INSERT INTO `character_applications` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
