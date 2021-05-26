@@ -34,6 +34,7 @@ session_start();
 	<input type="text" name="intelligence" placeholder='интелект'>
 	<input type="text" name="wisdom" placeholder='мудрость'>
 	<input type="text" name="charisma" placeholder='харизма'>
+	<input type="submit" name="reg">
 	<form action="index.php">
 	<a href="../index.php">на главную</a>
 	</form>
@@ -57,7 +58,9 @@ session_start();
 	$hp=5;
 	$magic='none';
 	$skill='none';
+	$reg=$_POST['reg'];
 	$owner_id=0;
+	
 	if ($reg) {
 		$str_players="INSERT INTO `character_applications` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
 					VALUES ('$name_hero', '$class_hero', '$magic', '$skill', '$gold', '$class_armor', '$hp', '$lvl', '$strong', '$dexterity', '$endurance', '$intelligence', '$wisdom', '$charisma', '$owner_id');";
