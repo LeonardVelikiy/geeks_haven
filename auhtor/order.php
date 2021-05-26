@@ -31,7 +31,7 @@ session_start();
 	<form method=POST >	
 	<span>Оформление заказа</span>
 	<input type=text name=login placeholder='имя' >
-	<input type=text name=time placeholder='кол-во часов игры'>
+	<input type=text name=time placeholder='колво часов игры'>
 	<input type=date name=date placeholder=дата>
 	<input type=text name=person placeholder='кол-во человек'>
 	<input type=text name=place placeholder=место>
@@ -57,7 +57,7 @@ session_start();
 	$person=$_POST['person'];
 	$place=$_POST['place'];
 	$tell=$_POST['tell'];
-
+	$order=$_POST['order'];
 	if ($order) {
 		$str_order="INSERT INTO `order_game` (`login`, `time`, `date`, `place`, `person`, `tell`) 
 		VALUES ('$login', '$time', '$date', '$place', '$person', '$tell');";
