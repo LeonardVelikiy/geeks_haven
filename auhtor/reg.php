@@ -64,7 +64,7 @@ session_start();
             ];
 			var_dump($_SESSION['user']);
 		
-			echo '<script>location.replace("reg_hero.php");</script>'; exit;
+			echo '<script>location.replace("reg_heros.php");</script>'; exit;
 			}
 			else 
 				{
