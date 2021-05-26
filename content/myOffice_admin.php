@@ -449,12 +449,14 @@ session_start();
 									
 									$id_hero_approve=$_GET['hero_approve'];
 
-									$out=mysqli_fetch_assoc($run_approve_hero);
-											
+									$out=mysqli_fetch_array($run_out_heros_applications);
+
 									$str_players="INSERT INTO `heros` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
 													VALUES ('$out[name_hero]', '$out[class_hero]', '$out[magic]', '$out[skill]', '$out[gold_count]', '$out[class_armor]', '$out[hp]', '$out[lvl]', '$out[strong]', '$out[dexterity]', '$out[endurance]', '$out[intelligence]', '$out[wisdom]', '$chariout[charisma]', '$out[owner_id]');";
 									$run_add_players=mysqli_query($connect,$str_players);
+
 									$id_hero_approve_del=$_GET['hero_approve'];
+									
 									$str_del_hero_approve="DELETE FROM `character_applications` WHERE id = $id_hero_approve_del";
 									$run_del_hero_approve=mysqli_query($connect,$str_del_hero_approve);
 	
