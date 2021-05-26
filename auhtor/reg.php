@@ -69,7 +69,7 @@ session_start();
 			print_r($str_chek_user_reg);
 			print_r($str_players);
 			var_dump($_SESSION['user']);
-			print_r($user);
+			var_dump($user);
 			print_r($_SESSION);
 			// echo '<script>location.replace("../index.php");</script>'; exit;
 			}
