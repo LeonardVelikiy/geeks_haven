@@ -412,7 +412,7 @@ session_start();
 						}
 					if ($_GET['application']or$_GET['hero_approve']) 
 					{
-						$heros_applications_del=$_GET['applications'];
+						$heros_applications_del=$_GET['application'];
 						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id = $heros_applications_del";
 						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
 
@@ -441,7 +441,7 @@ session_start();
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
-										<td><a href=?applications=$out[id_aplication]>удалить</a>
+										<td><a href=?application=$out[id_aplication]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id_aplication]>подробнее</a>
 										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
 									</tr>";
