@@ -5,7 +5,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="../style.css">
 <html>
 	<head>
-		<title>регистрация на Geek's Haven</title>
+		<title>регистрация Персонажа </title>
 		<!-- иконка -->
 		<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
@@ -24,15 +24,16 @@ session_start();
 <div class="header">Geek's Haven</div>
 <div class="regist">
 <form method="POST" >
-	<span>Моя учётная Запись</span>
-	<input type="text" name="login" placeholder="логин">
-	<input type="password" name="pass" placeholder="пароль">
-	<input type="text" name="name" placeholder="имя">
-	<input type="text" name="fam" placeholder="фамилия">
-	<input type="text" name="mail_cum" placeholder="Ел.почта">
-	<input type="radio" name="gender" value="f" >Ж
-	<input type="radio" name="gender" value="m">М
-	<input type="submit" name="reg" value="регистрация">
+	<span>Моя персонаж</span>
+	<input type="text" name="name_hero" placeholder='логин'>
+	<input type="text" name="class_hero" placeholder='класс'>
+	<input type="text" name="lvl" placeholder='уровень'>
+	<input type="text" name="strong" placeholder='сила'>
+	<input type="text" name="dexterity" placeholder='ловкость'>
+	<input type="text" name="endurance" placeholder='выносливость'>
+	<input type="text" name="intelligence" placeholder='интелект'>
+	<input type="text" name="wisdom" placeholder='мудрость'>
+	<input type="text" name="charisma" placeholder='харизма'>
 	<form action="index.php">
 	<a href="../index.php">на главную</a>
 	</form>
@@ -42,27 +43,30 @@ session_start();
 	include '../db.php';
 
 
-	$login=$_POST['login'];
-	$pass=$_POST['pass'];
-	$name=$_POST['name'];
-	$fam=$_POST['fam'];
-	$gender=$_POST['gender'];
-	$reg=$_POST['reg'];
-	$mail_cum=$_POST['mail_cum'];
+	$name_hero=$_POST['name_hero'];
+	$class_hero=$_POST['class_hero'];
+	$lvl=$_POST['lvl'];
+	$strong=$_POST['strong'];
+	$dexterity=$_POST['dexterity'];
+	$endurance=$_POST['endurance'];
+	$intelligence=$_POST['intelligence'];
+	$wisdom=$_POST['wisdom'];
+	$charisma=$_POST['charisma'];
+	$gold=0;
+	$class_armor=10;
+	$hp=5;
+	$magic='none';
+	$skill='none';
+	$owner_id=0;
 	if ($reg) {
-		$str_players="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,  `mail`) 
-			VALUES ('$login', '$pass', '$fam', '$name', '$gender','$mail_cum');";
+		$str_players="INSERT INTO `character_applications` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
+					VALUES ('$name_hero', '$class_hero', '$magic', '$skill', '$gold', '$class_armor', '$hp', '$lvl', '$strong', '$dexterity', '$endurance', '$intelligence', '$wisdom', '$charisma', '$owner_id');";
 
 		$run_add_players=mysqli_query($connect,$str_players);
 		$user= mysqli_fetch_assoc($run_add_players);
 		
 		if ($run_add_players) 
 		{
-			$_SESSION['user']=[
-                "name" =>$user['name'],
-                "login" =>$user['login'],
-                "role" =>$user['role']
-            ];
 			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 

@@ -49,7 +49,7 @@ session_start();
 	$gender=$_POST['gender'];
 	$reg=$_POST['reg'];
 	$mail_cum=$_POST['mail_cum'];
-	
+
 	if ($reg) {
 		$str_players="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,  `mail`) 
 			VALUES ('$login', '$pass', '$fam', '$name', '$gender','$mail_cum');";
@@ -64,7 +64,7 @@ session_start();
             ];
 			var_dump($_SESSION['user']);
 		
-			echo '<script>location.replace("../index.php");</script>'; exit;
+			echo '<script>location.replace("reg_hero.php");</script>'; exit;
 			}
 			else 
 				{
