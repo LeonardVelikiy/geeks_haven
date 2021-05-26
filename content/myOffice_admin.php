@@ -462,6 +462,22 @@ session_start();
 									$id_hero_approve_del=$_GET['hero_approve'];
 									$str_del_hero_approve="DELETE FROM `character_applications` WHERE id = $id_hero_approve_del";
 									$run_del_hero_approve=mysqli_query($connect,$str_del_hero_approve);
+									while ($out=mysqli_fetch_array($run_out_heros_applications)) 
+									{
+										$id++;
+										echo"
+									<tr>	
+										<td>$out[name_hero]
+										<td style=text-align:center;>$out[lvl]
+										<td>$out[class_hero]
+										<td>$out[hp]-hp
+										<td>-///-
+										<td>$out[login]
+										<td><a href=?heros_applications_del=$out[id_aplication]>удалить</a>
+										<td><a href=?heros_moreinfor=$out[id_aplication]>подробнее</a>
+										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
+									</tr>";
+									}
 									}
 						}	
 						echo "</div>";	
