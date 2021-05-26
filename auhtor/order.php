@@ -58,6 +58,7 @@ session_start();
 	$place=$_POST['place'];
 	$tell=$_POST['tell'];
 	$order=$_POST['order'];
+	
 	if ($order) {
 		$str_order="INSERT INTO `order_game` (`login`, `time`, `date`, `place`, `person`, `tell`) 
 		VALUES ('$login', '$time', '$date', '$place', '$person', '$tell');";
