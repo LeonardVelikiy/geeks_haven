@@ -451,10 +451,9 @@ session_start();
 									
 									$id_hero_approve=$_GET['hero_approve'];
 
-									$str_approve_hero="SELECT * FROM `character_applications` WHERE `id` = '$id_hero_approve'";
+									$str_approve_hero="SELECT * FROM `character_applications` WHERE `id_aplication` = '$id_hero_approve'";
 
 									$run_approve_hero=mysqli_query($connect,$str_approve_hero);
-									print_r($_GET['hero_approve']);
 
 									$out=mysqli_fetch_assoc($run_auth);
 											
