@@ -443,15 +443,16 @@ session_start();
 										<td>$out[login]
 										<td><a href=?application=$out[id_aplication]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id_aplication]>подробнее</a>
-										<td><a href=?hero_approve=$out[id_aplication]>одобрить</a>
+										<td><a href=?hero_aprove=$out[id_aplication]>одобрить</a>
 									</tr>";
 									}echo "</table>";
-									
-									$id_hero_aprove=$_GET['hero_aprove'];
 
 									if($_GET['hero_aprove'])
 									{
+									$id_hero_aprove=$_GET['hero_aprove'];
+											
 									$out=mysqli_fetch_array($run_out_heros_applications);
+
 									$str_heros_aprove="INSERT INTO `heros` (`name_hero`, `class_hero`, `magic`, `skill`, `gold_count`, `class_armor`, `hp`, `lvl`, `strong`, `dexterity`, `endurance`, `intelligence`, `wisdom`, `charisma`, `owner_id`) 
 													VALUES ('$out[name_hero]', '$out[class_hero]', '$out[magic]', '$out[skill]', '$out[gold_count]', '$out[class_armor]', '$out[hp]', '$out[lvl]', '$out[strong]', '$out[dexterity]', '$out[endurance]', '$out[intelligence]', '$out[wisdom]', '$chariout[charisma]', '$out[owner_id]');";
 									$run_heros_aprove=mysqli_query($connect,$str_heros_aprove);
