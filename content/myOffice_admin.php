@@ -46,67 +46,67 @@ session_start();
 					</div>
 					<div class="infor">
 						<?php
-						include '../db.php';
-						if ($_GET['exit']) 
-							{
-								unset($_SESSION['user']);
-								echo '<script>location.replace("../index.php");</script>'; exit;
-							}	
-						if ($_GET['news'] or $_GET['news_edit']) 
-							{
-							echo "<div class=part1>";
-							echo "
-							<form method=POST>
-								<span>Public News</span>
-								<input type=text name=author placeholder=автор>
-								<input type=text name=topic placeholder=Тема>
-								<input type=date name=date placeholder=дата публикации>
-								<textarea name=text></textarea>
-								<div class=fon>
-								<input type=submit name=public value=публикация class=knopca>
-								</div>";
+					include '../db.php';
+					if ($_GET['exit']) 
+						{
+							unset($_SESSION['user']);
+							echo '<script>location.replace("../index.php");</script>'; exit;
+						}	
+					if ($_GET['news'] or $_GET['news_edit']) 
+						{
+						echo "<div class=part1>";
+						echo "
+						<form method=POST>
+							<span>Public News</span>
+							<input type=text name=author placeholder=автор>
+							<input type=text name=topic placeholder=Тема>
+							<input type=date name=date placeholder=дата публикации>
+							<textarea name=text></textarea>
+							<div class=fon>
+							<input type=submit name=public value=публикация class=knopca>
+							</div>";
 
-								$author=$_POST['author'];
-								$topic=$_POST['topic'];
-								$date=$_POST['date'];
-								$text_news=$_POST['text'];
-								$public=$_POST['public'];
-								$exit=$_POST['exit'];
-							if ($public) 
+							$author=$_POST['author'];
+							$topic=$_POST['topic'];
+							$date=$_POST['date'];
+							$text_news=$_POST['text'];
+							$public=$_POST['public'];
+							$exit=$_POST['exit'];
+					if ($public) 
+					{
+						$str_add_test="INSERT INTO `news` (`topic`, `author`, `text`, `date`) 
+						VALUES ('$topic', '$author', '$text_news', '$date');";
+
+						$run_test=mysqli_query($connect,$str_add_test);
+
+						if ($run_test) 
 							{
-								$str_add_test="INSERT INTO `news` (`topic`, `author`, `text`, `date`) 
-								VALUES ('$topic', '$author', '$text_news', '$date');";
+								echo"успешно опубликованно";
+							}else
+								{
+									echo"ошибка";
+								}
+					
+					}
+					echo "</div>";
+					echo "<div class=part2>";
+					
+					if ($_GET['news']) 
+					{
+						$news=$_GET['news'];
+						$str_del_user="DELETE FROM `news` WHERE id = $news";
+						$run_del_user=mysqli_query($connect,$str_del_user);
 
-								$run_test=mysqli_query($connect,$str_add_test);
-
-								if ($run_test) 
-									{
-										echo"успешно опубликованно";
-									}else
-										{
-											echo"ошибка";
-										}
-							
-							}
-							echo "</div>";
-							echo "<div class=part2>";
-							
-							if ($_GET['news']) 
-							{
-								$news=$_GET['news'];
-								$str_del_user="DELETE FROM `news` WHERE id = $news";
-								$run_del_user=mysqli_query($connect,$str_del_user);
-
-								$str_out_news="SELECT * FROM `news`";
-								$run_out_news=mysqli_query($connect,$str_out_news);
-								
-								echo "<table border=1 cellspacing=0 class=table-dark>
-								<tr>
-									<th>Автор
-									<th>Тема
-									<th>дата
-									<th colspan=2>Действия
-								</tr>";
+						$str_out_news="SELECT * FROM `news`";
+						$run_out_news=mysqli_query($connect,$str_out_news);
+						
+						echo "<table border=1 cellspacing=0 class=table-dark>
+						<tr>
+							<th>Автор
+							<th>Тема
+							<th>дата
+							<th colspan=2>Действия
+						</tr>";
 
 								while ($out=mysqli_fetch_array($run_out_news)) 
 								{
@@ -121,62 +121,62 @@ session_start();
 									</tr>";
 								}
 						echo "</table>";
-						}elseif ($_GET['news_edit']) 
-							{
-									$news_edit=$_GET['news_edit'];
-									if ($_POST['public1']) 
-									{
-									$str_edit_news="UPDATE `news` SET `author` = '$_POST[author]',`topic`='$_POST[topic]',`text` = '$_POST[text]',`date` = '$_POST[date]'  WHERE `news`.`id` = $news_edit;";
-									$run_edit_news=mysqli_query($connect,$str_edit_news);
-									}
-									$str_out_news="SELECT * FROM `news` WHERE `news`.`id` = $news_edit";
-									$run_out_news=mysqli_query($connect,$str_out_news);
-									$out=mysqli_fetch_array($run_out_news);
-									echo "
-									<form method=POST>
-									<span>Изменения Новостей</span>
-									<input type=text name=author placeholder=автор value=$out[author] >
-									<input type=text name=topic placeholder=Имя value= $out[topic]>
-									<input type=date name=date placeholder=Пароль value=$out[date]>
-									<textarea type=text name=text class='text_edit' placeholder=text>$out[text]</textarea>
-									<input type=submit name=public1 value=Изменить class=knopca >
-									<a href=?news=edit_complite >Убрать меню измений</a>
-									</form>";
+							}elseif ($_GET['news_edit']) 
+								{
+										$news_edit=$_GET['news_edit'];
+										if ($_POST['public1']) 
+										{
+										$str_edit_news="UPDATE `news` SET `author` = '$_POST[author]',`topic`='$_POST[topic]',`text` = '$_POST[text]',`date` = '$_POST[date]'  WHERE `news`.`id` = $news_edit;";
+										$run_edit_news=mysqli_query($connect,$str_edit_news);
+										}
+										$str_out_news="SELECT * FROM `news` WHERE `news`.`id` = $news_edit";
+										$run_out_news=mysqli_query($connect,$str_out_news);
+										$out=mysqli_fetch_array($run_out_news);
+										echo "
+										<form method=POST>
+										<span>Изменения Новостей</span>
+										<input type=text name=author placeholder=автор value=$out[author] >
+										<input type=text name=topic placeholder=Имя value= $out[topic]>
+										<input type=date name=date placeholder=Пароль value=$out[date]>
+										<textarea type=text name=text class='text_edit' placeholder=text>$out[text]</textarea>
+										<input type=submit name=public1 value=Изменить class=knopca >
+										<a href=?news=edit_complite >Убрать меню измений</a>
+										</form>";
 
-							}
-							echo "</div>";	
-				}
-					
-				if ($_GET['players'] or $_GET['players_edit']) 
-				{	
-					echo "<div class=part1>";
-					echo "
-						<form method=POST>
-						<span>Добавление пользователей</span>
-						<input type=text name=login placeholder=логин>
-						<input type=password name=pass placeholder=пароль>
-						<input type=text name=name placeholder=имя>
-						<input type=text name=fam placeholder=фамилия>
-						<input type=radio name=gender value=f>F
-						<input type=radio name=gender value=m>M
-						<input type=mail name=mail placeholder=почта>
-						<div class=fon>
-						<input type=submit name=reg class=knopca> 
-						</div>
-						</form>";
-						$login=$_POST['login'];
-						$pass=$_POST['pass'];
-						$name=$_POST['name'];
-						$fam=$_POST['fam'];
-						$gender=$_POST['gender'];
-						$mail=$_POST['mail'];
-						$reg=$_POST['reg'];
-							if ($reg) 
-							{
-								$str_reg_users="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,`mail`) 
-								VALUES ('$login', '$pass', '$fam', '$name', '$gender', '$mail');";
-							 	$run_reg_users=mysqli_query($connect, $str_reg_users);
-							}
+								}
+								echo "</div>";	
+					}
+						
+					if ($_GET['players'] or $_GET['players_edit']) 
+					{	
+						echo "<div class=part1>";
+						echo "
+							<form method=POST>
+							<span>Добавление пользователей</span>
+							<input type=text name=login placeholder=логин>
+							<input type=password name=pass placeholder=пароль>
+							<input type=text name=name placeholder=имя>
+							<input type=text name=fam placeholder=фамилия>
+							<input type=radio name=gender value=f>F
+							<input type=radio name=gender value=m>M
+							<input type=mail name=mail placeholder=почта>
+							<div class=fon>
+							<input type=submit name=reg class=knopca> 
+							</div>
+							</form>";
+							$login=$_POST['login'];
+							$pass=$_POST['pass'];
+							$name=$_POST['name'];
+							$fam=$_POST['fam'];
+							$gender=$_POST['gender'];
+							$mail=$_POST['mail'];
+							$reg=$_POST['reg'];
+								if ($reg) 
+								{
+									$str_reg_users="INSERT INTO `players_and_masters` (`login`, `pass`, `fam`, `name`, `gender`,`mail`) 
+									VALUES ('$login', '$pass', '$fam', '$name', '$gender', '$mail');";
+									$run_reg_users=mysqli_query($connect, $str_reg_users);
+								}
 					echo "</div>";
 					echo "<div class=part2>";
 					if ($_GET['players']) 
@@ -206,7 +206,7 @@ session_start();
 								</tr>";
 								}
 								echo "</table>";
-					}elseif ($_GET['players_edit']) 
+						}elseif ($_GET['players_edit']) 
 							{
 								$players_edit=$_GET['players_edit'];
 								if ($_POST['edit']) 
@@ -231,19 +231,19 @@ session_start();
 											</div>
 											<a href=?players=edit_complite >Убрать меню измений</a>
 										</form>";
-						}
-				echo "</div>";
-				}
-				if (!$_GET or $_GET['order']) 
-				{
-					$order=$_GET['order'];
-					$str_del_user="DELETE FROM `order_game` WHERE id = $order";
-					$run_del_user=mysqli_query($connect,$str_del_user);
+											}
+									echo "</div>";
+									}
+					if (!$_GET or $_GET['order']) 
+					{
+						$order=$_GET['order'];
+						$str_del_user="DELETE FROM `order_game` WHERE id = $order";
+						$run_del_user=mysqli_query($connect,$str_del_user);
 
-					$str_out_order="SELECT * FROM `order_game`";
-					$run_out_order=mysqli_query($connect,$str_out_order);
+						$str_out_order="SELECT * FROM `order_game`";
+						$run_out_order=mysqli_query($connect,$str_out_order);
 
-					echo "<table border=1 cellspacing=0 class=table-dark>
+						echo "<table border=1 cellspacing=0 class=table-dark>
 								<tr>
 									<th>логин
 									<th>часы
@@ -300,31 +300,31 @@ session_start();
 					}
 					if ($_GET['ads_edit']) 
 					{
-								$ads_edit=$_GET['ads_edit'];
-								if ($_POST['edit']) 
-								{
-									$str_edit_ads="UPDATE `ads` SET `heros`= '$_POST[heros]', `campani` = '$_POST[campani]', `place` = '$_POST[place]', `who` = '$_POST[who]' WHERE `id` = $ads_edit;";
-									
-									// var_dump($str_edit_ads);
+						$ads_edit=$_GET['ads_edit'];
+						if ($_POST['edit']) 
+						{
+							$str_edit_ads="UPDATE `ads` SET `heros`= '$_POST[heros]', `campani` = '$_POST[campani]', `place` = '$_POST[place]', `who` = '$_POST[who]' WHERE `id` = $ads_edit;";
+							
+							// var_dump($str_edit_ads);
 
-									$run_edit_ads=mysqli_query($connect,$str_edit_ads);
-									
-								}
-									$str_out_ads="SELECT * FROM `ads` WHERE `ads`.`id` = $ads_edit";
-									$run_out_ads=mysqli_query($connect,$str_out_ads);
-									$out=mysqli_fetch_array($run_out_ads);
-									echo "<div class=part3>";
-									echo "<form method=POST>
-											<span>Изменения пользователей</span>
-											<input type=text name='heros' placeholder='герои' value='$out[heros]'>
-											<input type=text name='campani' placeholder='компания' value='$out[campani]'> 
-											<input type=text name='place' placeholder='место' value='$out[place]'>
-											<input type=text name='who' placeholder='у кого' value='$out[who]'>
-											<div class=fon>
-											<input type=submit name='edit' value='Изменить' class=knopca>
-											</div>
-											<a href=?ads=edit_complite >Убрать меню измений</a>
-										</form>";
+							$run_edit_ads=mysqli_query($connect,$str_edit_ads);
+							
+						}
+							$str_out_ads="SELECT * FROM `ads` WHERE `ads`.`id` = $ads_edit";
+							$run_out_ads=mysqli_query($connect,$str_out_ads);
+							$out=mysqli_fetch_array($run_out_ads);
+							echo "<div class=part3>";
+							echo "<form method=POST>
+									<span>Изменения пользователей</span>
+									<input type=text name='heros' placeholder='герои' value='$out[heros]'>
+									<input type=text name='campani' placeholder='компания' value='$out[campani]'> 
+									<input type=text name='place' placeholder='место' value='$out[place]'>
+									<input type=text name='who' placeholder='у кого' value='$out[who]'>
+									<div class=fon>
+									<input type=submit name='edit' value='Изменить' class=knopca>
+									</div>
+									<a href=?ads=edit_complite >Убрать меню измений</a>
+								</form>";
 														
 					}
 					if ($_GET['stuff']) 
@@ -374,7 +374,7 @@ session_start();
 							</div>";
 
 					}
-					if ($_GET['heros']) 
+					if ($_GET['heros'])
 					{
 						$heros=$_GET['heros'];
 						$str_del_heros="DELETE FROM `heros` WHERE id = $heros";
@@ -406,6 +406,42 @@ session_start();
 										<td>-///-
 										<td>$out[login]
 										<td><a href=?heros=$out[id]>удалить</a>
+										<td><a href=?heros_moreinfor=$out[id]>подробнее</a>
+									</tr>";
+									}echo "</table>";
+						}
+					if ($_GET['heros_applications']) 
+					{
+						$heros_applications_del=$_GET['heros_applications_del'];
+						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id = $heros_applications_del";
+						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
+
+						$str_out_heros_applications="SELECT * FROM `character_applications` JOIN players_and_masters ON owner_id=players_and_masters.id";
+						$run_out_heros_applications=mysqli_query($connect,$str_out_heros_applications);
+
+						echo "<table border=1 cellspacing=0 class=table-dark>
+									<tr>
+										<th>Перс
+										<th>уровень
+										<th>класс
+										<th>состояние
+										<th>расположен
+										<th>владелец
+										<th>дейсвия
+									</tr>
+								";
+									while ($out=mysqli_fetch_array($run_out_heros_applications)) 
+									{
+										$id++;
+										echo"
+									<tr>	
+										<td>$out[name_hero]
+										<td>$out[lvl]
+										<td>-///-
+										<td>$out[hp]-hp
+										<td>-///-
+										<td>$out[login]
+										<td><a href=?heros_applications_del=$out[id]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
