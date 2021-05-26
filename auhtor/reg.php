@@ -57,6 +57,7 @@ session_start();
 		$str_chek_user_reg="SELECT * FROM `players_and_masters` WHERE `login` = '$login' AND `pass`= '$pass'";
 		$run_chek_user_reg=mysqli_query($connect,$str_auth);
 		$user=mysqli_fetch_assoc($run_chek_user_reg);
+		$check_users=mysqli_num_rows($run_chek_user_reg);
 		if ($run_add_players) 
 		{
 			
@@ -66,11 +67,15 @@ session_start();
                 "role" =>$user['role']
             ];
 			echo'<pre>';
+			if ($check_users)
+			{
 			print_r($str_chek_user_reg);
 			print_r($str_players);
 			var_dump($_SESSION['user']);
 			var_dump($user);
 			print_r($_SESSION);
+			}
+			
 			// echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
