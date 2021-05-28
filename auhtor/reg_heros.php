@@ -33,7 +33,7 @@ $out=mysqli_fetch_assoc($run_auth);
 	</body>
 </html>
 <div class="header">Geek's Haven</div>
-<div class="regist">
+<div class="regist_heros">
 <form method="POST" >
 	<span>Мой персонаж</span>
 	<input type="text" name="name_hero" placeholder='логин'>
