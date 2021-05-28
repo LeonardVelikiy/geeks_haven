@@ -320,7 +320,13 @@ width: 680px;
 	font-family: "title_font";
 	font-size: 25px;
 }
-.regist_heros > form :nth-child(4.5.6)
+.regist_heros > form :nth-child(10),
+.regist_heros > form :nth-child(9),
+.regist_heros > form :nth-child(8),
+.regist_heros > form :nth-child(7),
+.regist_heros > form :nth-child(6),
+.regist_heros > form :nth-child(5),
+.regist_heros > form :nth-child(4)
 {
  width: 60px;
 }
