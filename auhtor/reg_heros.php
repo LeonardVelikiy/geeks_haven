@@ -36,12 +36,12 @@ $out=mysqli_fetch_assoc($run_auth);
 <div class="regist_heros">
 <form method="POST" >
 	<span>Мой персонаж</span>
-	<input type="text" name="name_hero" placeholder='логин'>
+	<input type="text" name="name_hero" placeholder='Имя героя'>
 	<input type="text" name="class_hero" placeholder='класс'>
 	<input type="text" name="lvl" placeholder='уровень'>
 	<input type="text" name="strong" placeholder='сила'>
 	<input type="text" name="dexterity" placeholder='ловкость'>
-	<input type="text" name="endurance" placeholder='выносливость'>
+	<input type="text" name="endurance" placeholder='живучесть'>
 	<input type="text" name="intelligence" placeholder='интелект'>
 	<input type="text" name="wisdom" placeholder='мудрость'>
 	<input type="text" name="charisma" placeholder='харизма'>
