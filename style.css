@@ -265,6 +265,7 @@ width: 680px;
 	font-family: "title_font";
 	font-size: 25px;
 }
+.regist_heros,
 .regist
 {
 	width: 500px;
@@ -276,7 +277,13 @@ width: 680px;
     background-repeat: no-repeat;
     border: 0.1px solid #E9C674;
 }
-.regist_heros,
+.regist_heros > form
+{
+	width: 300px;
+	height: 200px;
+	margin: 100px auto;
+	text-align: center;
+}
 .regist > form
 {
 	width: 300px;
