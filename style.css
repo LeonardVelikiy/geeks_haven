@@ -308,7 +308,7 @@ width: 680px;
 	font-family: "Typewritten";
 	font-size: 20px;
 	width: 200px;
-	height: 30px;
+	
 	border: none;
 	cursor: pointer;
 	background-color: transparent;
@@ -332,6 +332,11 @@ width: 680px;
 	width: 60px;
 	font-size: 15px;
 	
+}
+.regist_heros > form :nth-child(11)
+{
+	width: 120px;
+	margin: auto;
 }
 .ilP
 {
