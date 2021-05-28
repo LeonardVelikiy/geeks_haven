@@ -279,8 +279,8 @@ width: 680px;
 .regist > form
 {
 	width: 300px;
-	height: 400px;
-	margin: 100px auto;
+	height: 300px;
+	margin: 120px auto;
 	text-align: center;
 
 }
@@ -300,13 +300,12 @@ width: 680px;
 	font-size: 25px;
 }
 .ilP
-{
- height: 50px;
-
- margin-bottom: 500px;
- width: 200px;
- color: gray;
- margin: auto;
+{ 
+	height: 50px;
+	margin-bottom: 500px;
+	width: 200px;
+	color: gray;
+	margin: auto;
 }
 .hi
 {	
