@@ -406,7 +406,7 @@ session_start();
 										<td>$out[hp]-hp
 										<td>-///-
 										<td>$out[login]
-										<td><a href=?heros=$out[id]>удалить</a>
+										<td><a href=?heros=$out[id_heros]>удалить</a>
 										<td><a href=?heros_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
