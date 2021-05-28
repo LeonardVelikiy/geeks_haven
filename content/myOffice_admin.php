@@ -330,7 +330,7 @@ session_start();
 					if ($_GET['stuff']) 
 					{
 						$stuff=$_GET['stuff'];
-						$str_del_stuff="DELETE FROM `stuff` WHERE id = $stuff";
+						$str_del_stuff="DELETE FROM `stuff` WHERE id_stuff = $stuff";
 						$run_del_stuff=mysqli_query($connect,$str_del_stuff);
 
 						$str_out_stuff="SELECT * FROM `stuff`";
@@ -352,7 +352,7 @@ session_start();
 										<td>$out[name_stuff]
 										<td>$out[price]
 										<td>$out[rarity]
-										<td><a href=?stuff=$out[id]>удалить</a>
+										<td><a href=?stuff=$out[id_stuff]>удалить</a>
 										<td><a href=?stuff_moreinfor=$out[id]>подробнее</a>
 									</tr>";
 									}echo "</table>";
@@ -360,7 +360,7 @@ session_start();
 					if ($_GET['stuff_moreinfor'])
 					{
 						$stuff_moreinfor=$_GET['stuff_moreinfor'];
-						$str_infor_stuff="SELECT * FROM `stuff` WHERE id=$stuff_moreinfor";
+						$str_infor_stuff="SELECT * FROM `stuff` WHERE id_stuff=$stuff_moreinfor";
 						$run_infor_stuff=mysqli_query($connect,$str_infor_stuff);
 						$out=mysqli_fetch_array($run_infor_stuff);
 						echo"
