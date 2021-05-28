@@ -425,8 +425,8 @@ session_start();
 										VALUES ('$out_aprove[name_hero]', '$out_aprove[class_hero]', '$out_aprovemagic]', '$out_aprove[skill]', '$out_aprove[gold_count]', '$out_aprove[class_armor]', '$out_aprove[hp]', '$out_aprove[lvl]', '$out_aprove[strong]', '$out_aprove[dexterity]', '$out_aprove[endurance]', '$out_aprove[intelligence]', '$out_aprove[wisdom]', '$out_aprove[charisma]', '$out_aprove[owner_id]');";
 						$run_heros_aprove=mysqli_query($connect,$str_heros_aprove);
 						
-						$heros_applications_del=$_GET['application']or$_GET['hero_aprove'];
-						
+						$heros_applications_del=$_GET['application'];
+
 						$str_del_heros_applications="DELETE FROM `character_applications` WHERE id_aplication = $heros_applications_del";
 						$run_del_heros_applications=mysqli_query($connect,$str_del_heros_applications);
 
