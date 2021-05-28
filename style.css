@@ -265,6 +265,7 @@ width: 680px;
 	font-family: "title_font";
 	font-size: 25px;
 }
+
 .regist_heros,
 .regist
 {
@@ -291,10 +292,17 @@ width: 680px;
 	margin: 100px auto;
 	text-align: center;
 }
-
-
-.regist_heros,
 .regist > form > input
+{
+	font-family: "Typewritten";
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.regist_heros > form > input
 {
 	font-family: "Typewritten";
 	font-size: 20px;
@@ -310,6 +318,7 @@ width: 680px;
 	font-family: "title_font";
 	font-size: 25px;
 }
+
 .ilP
 {
 	height: 50px;
