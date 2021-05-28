@@ -377,7 +377,8 @@ session_start();
 					if ($_GET['heros'])
 					{
 						$heros=$_GET['heros'];
-						$str_del_heros="DELETE FROM `heros` WHERE id = $heros";
+						$str_del_heros="DELETE FROM `heros` WHERE id_heros = $heros";
+
 						$run_del_heros=mysqli_query($connect,$str_del_heros);
 
 						$str_out_heros="SELECT * FROM `heros` JOIN players_and_masters ON owner_id=players_and_masters.id";
