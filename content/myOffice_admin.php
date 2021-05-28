@@ -353,7 +353,7 @@ session_start();
 										<td>$out[price]
 										<td>$out[rarity]
 										<td><a href=?stuff=$out[id_stuff]>удалить</a>
-										<td><a href=?stuff_moreinfor=$out[id]>подробнее</a>
+										<td><a href=?stuff_moreinfor=$out[id_stuff]>подробнее</a>
 									</tr>";
 									}echo "</table>";
 						}
