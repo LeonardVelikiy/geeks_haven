@@ -329,7 +329,8 @@ width: 680px;
 .regist_heros > form :nth-child(4)
 {
 	width: 60px;
-	font-size: 10px;
+	font-size: 15px;
+	margin: auto;
 }
 .ilP
 {
