@@ -3,11 +3,8 @@ session_start();
 include '../db.php';
 
 $login=$_SESSION['user']['login'];
-
 $str_auth="SELECT * FROM `players_and_masters` WHERE `login` = '$login'";
-
 $run_auth=mysqli_query($connect,$str_auth);
-
 $out=mysqli_fetch_assoc($run_auth);
 
 ?>
