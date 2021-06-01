@@ -67,6 +67,7 @@ session_start();
 		if ($run_add_order) 
 		{
 			echo"спасибо за заказ";
+			
 			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
