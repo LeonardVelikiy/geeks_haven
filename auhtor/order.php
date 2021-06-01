@@ -63,10 +63,11 @@ session_start();
 		$str_order="INSERT INTO `order_game` (`login`, `time`, `date`, `place`, `person`, `tell`) 
 		VALUES ('$login', '$time', '$date', '$place', '$person', '$tell');";
 		$run_add_order=mysqli_query($connect,$str_order);
-		print_r($str_order);
+	
 		if ($run_add_order) 
 		{
 			echo"спасибо за заказ";
+			echo '<script>location.replace("../index.php");</script>'; exit;
 			}
 			else 
 				{
