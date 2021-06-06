@@ -29,7 +29,7 @@ session_start();
 
 				include 'bd_pdo.php';
 
-				$sql ="INSERT INTO `text` VALUES (:text)";
+				$sql ="INSERT INTO `news` VALUES (:text)";
 				$query = $pdo ->prepare($sql);
 				$query ->execute(['text'=>$text]);
 			?>
