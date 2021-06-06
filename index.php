@@ -21,6 +21,18 @@ session_start();
 <body>
 
 		<div class="body">
+			<form method="POST">
+		<input type="text" name="text">
+		<input type="submit" name="reg">
+			</form>
+			<?php
+
+				include 'bd_pdo.php';
+
+				$sql ="INSERT INTO `text` VALUES (:text)";
+				$query = $pdo ->prepare($sql);
+				$query ->execute(['text'=>$text]);
+			?>
 			<div class="head">Geek's Haven</div>
 	
 
